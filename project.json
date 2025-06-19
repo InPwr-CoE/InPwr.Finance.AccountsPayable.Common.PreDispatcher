@@ -1,0 +1,63 @@
+{
+  "name": "APInvoice.PreDispatcher",
+  "projectId": "c57bf154-2435-4517-8b79-143c8ed3750a",
+  "description": "Accounts payable receives all unprocessed invoices from vendors into a specific Outlook inbox, accounting@inpwric.com.  All the emails are first moved to AP INVOICE ENTRY - CoE folder if they are Invoice Emails with PDF attachments. Then, from AP INVOICE ENTRY - CoE all mails are moved to vendor based folders based on Finance_APVendorMasterList  Data service Entity",
+  "main": "Main.xaml",
+  "dependencies": {
+    "InPwr.CoE.CustomComponent.DataServices": "[1.0.7]",
+    "InPwr.CoE.CustomComponent.Mail": "[1.0.13]",
+    "InPwr.CoE.CustomComponent.Utility": "[1.0.12]",
+    "UiPath.Excel.Activities": "[3.0.1]",
+    "UiPath.System.Activities": "[24.10.6]",
+    "UiPath.UIAutomation.Activities": "[24.10.6]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.1.0",
+  "projectVersion": "1.0.2",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "c2f495a2-6211-4898-8880-05317f1f1a44",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
