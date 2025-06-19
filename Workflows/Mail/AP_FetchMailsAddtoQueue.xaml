@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1202,6875</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1202,7008</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -190,7 +190,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) Config: Response from Intialize Configuration activity as a dictionary.&#xA;&#xA;Description: This workflow is used to read Mails from Inbox of Accounting@Inpwr.com and add read Maild to AP_PreDispatcherQueue&#xA;" DisplayName="AccountsPayable_Fetch Mails_Add to Queue" sap:VirtualizedContainerService.HintSize="1212,6770" sap2010:WorkflowViewState.IdRef="Sequence_63">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) Config: Response from Intialize Configuration activity as a dictionary.&#xA;&#xA;Description: This workflow is used to read Mails from Inbox of Accounting@Inpwr.com and add read Maild to AP_PreDispatcherQueue&#xA;" DisplayName="AccountsPayable_Fetch Mails_Add to Queue" sap:VirtualizedContainerService.HintSize="1212,6943" sap2010:WorkflowViewState.IdRef="Sequence_63">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_MailSearchQuery" />
       <Variable x:TypeArguments="x:String" Name="str_o365ApplicationId" />
@@ -252,7 +252,7 @@
       </ui:MultipleAssign>
       <ui:LogMessage DisplayName="Log Message Mail Search Query" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Mail Search Query : &quot;+str_MailSearchQuery]" />
     </Sequence>
-    <Sequence DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="1150,5692" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="1150,5865" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -261,6 +261,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="1088,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]" />
       <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="[CInt(Config(&quot;AP_O365_MailReadLimit&quot;))]" Emailfolder="[Config(&quot;AP_O365_MailFolder_Input&quot;).ToString]" EmailsRead="[arr_MailsFetched]" sap:VirtualizedContainerService.HintSize="1088,530" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Tenant="[Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]" />
+      <ui:LogMessage DisplayName="Log Message Number of Emails" sap:VirtualizedContainerService.HintSize="1088,173" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[String.Format(&quot;Fetched {0} mails &quot;,arr_MailsFetched.Count.ToString)]" />
       <If Condition="[arr_MailsFetched.Count &gt; 0]" DisplayName="Handle Email condition and Add to PreDispatcher Queue" sap:VirtualizedContainerService.HintSize="1088,4867" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -433,7 +434,7 @@
                                                     <InArgument x:TypeArguments="x:Int32">[int_CountOfMovedItems+1]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <ui:LogMessage DisplayName="Log Moved Count" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Info" Message="[string.Format(&quot;Added {0} Mails to Queue and Moved them to [{1}] folder&quot;,int_CountOfMovedItems.ToString,Config(&quot;AP_O365_MailFolder_Input&quot;).ToString)]" />
+                                                <ui:LogMessage DisplayName="Log Moved Count" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Info" Message="[string.Format(&quot;Added {0} Mails to Queue and Moved them to [{1}] folder&quot;,int_CountOfMovedItems.ToString,Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString)]" />
                                               </Sequence>
                                             </ActivityAction>
                                           </ui:RetryScope.ActivityBody>
