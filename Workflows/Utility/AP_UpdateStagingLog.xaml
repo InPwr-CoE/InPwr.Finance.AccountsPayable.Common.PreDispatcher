@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AP_UpdateStagingLog" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:iu="clr-namespace:InPwr_CoE_CustomComponent_Utility.Utility;assembly=InPwr.CoE.CustomComponent.Utility" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AP_UpdateStagingLog" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:iu="clr-namespace:InPwr_CoE_CustomComponent_Utility.Utility;assembly=InPwr.CoE.CustomComponent.Utility" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_dicVendorInformation" Type="InArgument(scg:Dictionary(x:String, x:String))" />
@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>943,4744</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>943,3822</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AP_TEMP_GetMail</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -156,7 +156,7 @@
       <AssemblyReference>Microsoft.Graph</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_JobData: Get current job information (Process and Tenant name) to create Runtime folder path.&#xA;3) in_dicVendorInformation: Get the vendor information (vendor name) to create Runtime folder path.&#xA;4) in_strErrorMessage: Get the error message to add comments in the Log file.&#xA;5) in_TransactionItem: Get the Mail details from PreDispatcher Queue item.&#xA;&#xA;&#xA;Description : This Workflow used to update the mail and vendor information in Runtime Email Staging log excel file.&#xA;&#xA;&#xA;Output: N/A&#xA;" DisplayName="AP_UpdateStagingLog" sap:VirtualizedContainerService.HintSize="603,4679" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_JobData: Get current job information (Process and Tenant name) to create Runtime folder path.&#xA;3) in_dicVendorInformation: Get the vendor information (vendor name) to create Runtime folder path.&#xA;4) in_strErrorMessage: Get the error message to add comments in the Log file.&#xA;5) in_TransactionItem: Get the Mail details from PreDispatcher Queue item.&#xA;&#xA;&#xA;Description : This Workflow used to update the mail and vendor information in Runtime Email Staging log excel file.&#xA;&#xA;&#xA;Output: N/A&#xA;" DisplayName="AP_UpdateStagingLog" sap:VirtualizedContainerService.HintSize="603,3757" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ExistingRuntimeLog" />
       <Variable x:TypeArguments="x:String" Name="str_ExistingPrimaryKey" />
@@ -177,7 +177,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Started&quot;" sap:VirtualizedContainerService.HintSize="541,173" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Started&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="Initialize the Log file path based on Vendor Type or Exception message.&#xA;&#xA;Creating duplicate of Drive path in Local drive (C:)" DisplayName="Input Validation Stage" sap:VirtualizedContainerService.HintSize="541,1600" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence sap2010:Annotation.AnnotationText="Initialize the Log file path based on Vendor Type or Exception message.&#xA;&#xA;Creating duplicate of Drive path in Local drive (C:)" DisplayName="Input Validation Stage" sap:VirtualizedContainerService.HintSize="541,1900" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -260,8 +260,9 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <iu:Manage_Folder DisplayName="Manage Folder" FolderPath="[String.Empty]" FolderPathCollection="[New List(Of String) From {str_DriveFolderPath, str_LocalFolderPath}]" sap:VirtualizedContainerService.HintSize="479,249" sap2010:WorkflowViewState.IdRef="Manage_Folder_1" TargetAction="Create" />
-      <iu:Copy_File DestinationFilePath="[str_LocalFilePath]" DisplayName="Copy File - Drive to Local" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="Copy_File_2" SourceFilePath="[str_DriveFilePath]" />
+      <iu:Manage_Folder DisplayName="Manage Folder" FolderPath="[str_DriveFolderPath]" FolderPathCollection="[New List(Of String)]" sap:VirtualizedContainerService.HintSize="479,249" sap2010:WorkflowViewState.IdRef="Manage_Folder_1" TargetAction="Create" />
+      <iu:Manage_Folder DisplayName="Manage Folder" FolderPath="[str_LocalFolderPath]" FolderPathCollection="[New List(Of String)]" sap:VirtualizedContainerService.HintSize="479,249" sap2010:WorkflowViewState.IdRef="Manage_Folder_2" TargetAction="Both" />
+      <iu:Copy_File DestinationFilePath="[str_LocalFilePath]" DisplayName="Copy File - Drive to Local" sap:VirtualizedContainerService.HintSize="479,224" sap2010:WorkflowViewState.IdRef="Copy_File_2" Overwrite="True" SourceFilePath="[str_DriveFilePath]" />
       <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Read Runtime Staging log file | &quot;+in_strLocalRuntimeFilePath" sap:VirtualizedContainerService.HintSize="479,173" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Read Runtime Staging log file | &quot;+str_LocalFilePath]" />
       <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Read Range Workbook - RuntimeLogFile" sap:VirtualizedContainerService.HintSize="479,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[in_Config(&quot;AP_SharedDrive_Runtime_SheetName&quot;).ToString]" WorkbookPath="[str_LocalFilePath]">
         <ui:ReadRange.Range>
@@ -294,7 +295,7 @@
       </ui:MultipleAssign>
       <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Existing Primary key [ &quot;+ str_ExistingPrimaryKey + &quot; ]. | New Primary key [ &quot;+str_NewPrimaryKey + &quot; ].&quot;" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Existing Primary key [ &quot;+ str_ExistingPrimaryKey + &quot; ]. | New Primary key [ &quot;+str_NewPrimaryKey + &quot; ].&quot;]" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Update the Mail and Vendor information in the Runtime Staging Log excel file.&#xA;-PrimaryAttachmentKey&#xA;-AttachmentCount&#xA;-AttachmentFilename&#xA;-MessageDate&#xA;-MessageTime&#xA;-MessageSender&#xA;-MessageSubject&#xA;-Excluded&#xA;-EntityVendorName&#xA;-EntityVendorID&#xA;-EntityVendorTypeCode&#xA;-Comment&#xA;&#xA;Copy the local Runtime log file to share drive folder.&#xA;" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="541,2432" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence sap2010:Annotation.AnnotationText="Update the Mail and Vendor information in the Runtime Staging Log excel file.&#xA;-PrimaryAttachmentKey&#xA;-AttachmentCount&#xA;-AttachmentFilename&#xA;-MessageDate&#xA;-MessageTime&#xA;-MessageSender&#xA;-MessageSubject&#xA;-Excluded&#xA;-EntityVendorName&#xA;-EntityVendorID&#xA;-EntityVendorTypeCode&#xA;-Comment&#xA;&#xA;Copy the local Runtime log file to share drive folder.&#xA;" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="541,1210" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -302,8 +303,21 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message - &quot;&quot;AP_UpdateStagingLog: Adding data row in the logging.&quot;&quot;" sap:VirtualizedContainerService.HintSize="456,173" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Adding data row in the logging.&quot;]" />
-      <If Condition="[Not String.IsNullOrEmpty(in_dicVendorInformation(&quot;ERPVendorType&quot;).ToString())]" DisplayName="Handle Vendor information condition" sap:VirtualizedContainerService.HintSize="456,764" sap2010:WorkflowViewState.IdRef="If_3">
+      <ui:LogMessage DisplayName="Log Message - &quot;&quot;AP_UpdateStagingLog: Adding data row in the logging.&quot;&quot;" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Adding data row in the logging.&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <If Condition="[Not String.IsNullOrEmpty(in_dicVendorInformation(&quot;ERPVendorType&quot;).ToString())]" DisplayName="Handle Vendor information condition" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="If_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
         <If.Then>
           <Sequence DisplayName="Then - Vendor Found" sap:VirtualizedContainerService.HintSize="416,297" sap2010:WorkflowViewState.IdRef="Sequence_40">
             <sap:WorkflowViewStateService.ViewState>
@@ -311,7 +325,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str_NewPrimaryKey,String.Empty,String.Empty,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_Date&quot;).ToString,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_Time&quot;).ToString,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_SenderAddress&quot;).ToString,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;),&#xD;&#xA;in_dicVendorInformation(&quot;IsVendorExcluded&quot;).ToString,&#xD;&#xA;in_dicVendorInformation(&quot;ERPVendorName&quot;).ToString,&#xD;&#xA;in_dicVendorInformation(&quot;ERPVendorID&quot;).ToString,&#xD;&#xA;in_dicVendorInformation(&quot;ERPVendorType&quot;).ToString,&#xD;&#xA;in_strErrorMessage&#xD;&#xA;}]" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str_NewPrimaryKey,String.Empty,String.Empty,&#xA;in_TransactionItem.SpecificContent(&quot;Message_Date&quot;).ToString,&#xA;in_TransactionItem.SpecificContent(&quot;Message_Time&quot;).ToString,&#xA;in_TransactionItem.SpecificContent(&quot;Message_SenderAddress&quot;).ToString,&#xA;in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;),&#xA;in_dicVendorInformation(&quot;IsVendorExcluded&quot;).ToString,&#xA;in_dicVendorInformation(&quot;ERPVendorName&quot;).ToString,&#xA;in_dicVendorInformation(&quot;ERPVendorID&quot;).ToString,&#xA;in_dicVendorInformation(&quot;ERPVendorType&quot;).ToString,&#xA;in_strErrorMessage&#xA;}]" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_6" />
           </Sequence>
         </If.Then>
         <If.Else>
@@ -321,70 +335,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str_NewPrimaryKey,String.Empty,String.Empty,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_Date&quot;).ToString,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_Time&quot;).ToString,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_SenderAddress&quot;).ToString,&#xD;&#xA;in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;),&#xD;&#xA;String.Empty,&#xD;&#xA;in_dicVendorInformation(&quot;ERPVendorName&quot;).ToString,&#xD;&#xA;in_dicVendorInformation(&quot;ERPVendorID&quot;).ToString,&#xD;&#xA;in_dicVendorInformation(&quot;ERPVendorType&quot;).ToString,&#xD;&#xA;in_strErrorMessage&#xD;&#xA;}]" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
+            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{str_NewPrimaryKey,String.Empty,String.Empty,&#xA;in_TransactionItem.SpecificContent(&quot;Message_Date&quot;).ToString,&#xA;in_TransactionItem.SpecificContent(&quot;Message_Time&quot;).ToString,&#xA;in_TransactionItem.SpecificContent(&quot;Message_SenderAddress&quot;).ToString,&#xA;in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;),&#xA;String.Empty,&#xA;in_dicVendorInformation(&quot;ERPVendorName&quot;).ToString,&#xA;in_dicVendorInformation(&quot;ERPVendorID&quot;).ToString,&#xA;in_dicVendorInformation(&quot;ERPVendorType&quot;).ToString,&#xA;in_strErrorMessage&#xA;}]" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="354,209" sap2010:WorkflowViewState.IdRef="AddDataRow_7" />
           </Sequence>
         </If.Else>
       </If>
-      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="456,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Config(&quot;AP_SharedDrive_Runtime_SheetName&quot;).ToString]" WorkbookPath="[str_LocalFilePath]">
+      <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ExistingRuntimeLog]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="[in_Config(&quot;AP_SharedDrive_Runtime_SheetName&quot;).ToString]" WorkbookPath="[str_LocalFilePath]">
         <ui:WriteRange.StartingCell>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
           </InArgument>
         </ui:WriteRange.StartingCell>
       </ui:WriteRange>
-      <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Updated the Runtime Log file | &quot;+in_strLocalRuntimeFilePath" sap:VirtualizedContainerService.HintSize="456,173" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Updated the Runtime Log file | &quot;+str_LocalFilePath]" />
-      <TryCatch DisplayName="Try Catch - Copy RuntimeLog file from Local to share drive" sap:VirtualizedContainerService.HintSize="456,638" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <TryCatch.Try>
-          <Sequence DisplayName="Try - Copy RuntimeLog file to share drive" sap:VirtualizedContainerService.HintSize="416,265" sap2010:WorkflowViewState.IdRef="Sequence_43">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:CopyFile ContinueOnError="{x:Null}" Destination="[str_DriveFilePath]" DisplayName="Copy RuntimeLog file to share drive" sap:VirtualizedContainerService.HintSize="354,177" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[str_LocalFilePath]" />
-          </Sequence>
-        </TryCatch.Try>
-        <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,444" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ActivityAction x:TypeArguments="s:Exception">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Catch - Copy RuntimeLog file to share drive" sap:VirtualizedContainerService.HintSize="416,374" sap2010:WorkflowViewState.IdRef="Sequence_44">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Unable to copy the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Error" Message="[&quot;AP_UpdateStagingLog: Unable to copy the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message]">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:LogMessage>
-                <Throw DisplayName="Throw - New SystemException(&quot;AP_UpdateStagingLog: Unable to copy the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message)" Exception="[New SystemException(&quot;AP_UpdateStagingLog: Unable to copy the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1" />
-              </Sequence>
-            </ActivityAction>
-          </Catch>
-        </TryCatch.Catches>
-      </TryCatch>
-      <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Copied the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ].&quot;" sap:VirtualizedContainerService.HintSize="456,164" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Copied the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ].&quot;]" />
+      <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Updated the Runtime Log file | &quot;+in_strLocalRuntimeFilePath" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Updated the Runtime Log file | &quot;+str_LocalFilePath]" />
+      <iu:Copy_File DestinationFilePath="[str_DriveFilePath]" DisplayName="Copy File - Drive to Local" sap:VirtualizedContainerService.HintSize="388,224" sap2010:WorkflowViewState.IdRef="Copy_File_3" Overwrite="True" SourceFilePath="[str_LocalFilePath]" />
+      <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Copied the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ].&quot;" sap:VirtualizedContainerService.HintSize="388,164" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Copied the Runtime log file from local folder [ &quot;+str_LocalFilePath +&quot; ] to Share drive folder [ &quot;+str_DriveFilePath +&quot; ].&quot;]" />
     </Sequence>
     <ui:LogMessage DisplayName="Log Message - &quot;AP_UpdateStagingLog: Ended&quot;" sap:VirtualizedContainerService.HintSize="541,164" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_UpdateStagingLog: Ended&quot;]" />
   </Sequence>
