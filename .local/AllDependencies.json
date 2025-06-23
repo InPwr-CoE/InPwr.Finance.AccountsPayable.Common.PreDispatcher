@@ -23641,15 +23641,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\": {}
+    "C:\\Users\\CoEDevelopmentBotVPe\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "APInvoice.PreDispatcher",
       "projectName": "APInvoice.PreDispatcher",
-      "projectPath": "C:\\Users\\CoEBusinessAnalystIC\\Documents\\InPwr.Finance.AccountsPayable.Common.PreDispatcher\\.local",
-      "packagesPath": "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CoEBusinessAnalystIC\\Documents\\InPwr.Finance.AccountsPayable.Common.PreDispatcher\\.local"
+      "projectPath": "C:\\Users\\CoEDevelopmentBotVPe\\Documents\\UiPath\\WorkingCode\\InPwr.Finance.AccountsPayable.Common.PreDispatcher\\.local",
+      "packagesPath": "C:\\Users\\CoEDevelopmentBotVPe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CoEDevelopmentBotVPe\\Documents\\UiPath\\WorkingCode\\InPwr.Finance.AccountsPayable.Common.PreDispatcher\\.local"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -23685,7 +23685,7 @@
             "version": "[24.10.6, 24.10.6]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\CoEBusinessAnalystIC\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\CoEDevelopmentBotVPe\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
