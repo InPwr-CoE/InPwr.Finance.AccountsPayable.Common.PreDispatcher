@@ -1,0 +1,40 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "dt_ExceptionTable&StateMachine_1",
+        "dt_EmailTable&StateMachine_1",
+        "str_DataServiceAPI_ClientSecretId&StateMachine_1",
+        "str_DataServiceAPI_ClientId&StateMachine_1",
+        "downloadResponse&StateMachine_1",
+        "JobData&StateMachine_1",
+        "str_MappingStatus&TryCatch_2",
+        "ShouldStop&Sequence_25",
+        "str_o365ApplicationId&Sequence_81",
+        "secstr_o365ApplicationSecret&Sequence_81"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ConfigurationFileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

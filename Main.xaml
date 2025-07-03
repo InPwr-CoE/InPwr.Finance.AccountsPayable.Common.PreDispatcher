@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1239,1209</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>755,969</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -611,9 +611,9 @@
                     <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
                   </Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="845,5932" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="1046,9485" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="799,5513" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="1000,9066" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <TryCatch.Variables>
                             <Variable x:TypeArguments="x:String" Name="str_MappingStatus" />
                           </TryCatch.Variables>
@@ -624,14 +624,14 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="761,5009" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="962,8562" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="699,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="900,114" sap2010:WorkflowViewState.IdRef="Assign_5">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                                 </Assign.To>
@@ -644,7 +644,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="699,4567" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="900,8120" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -653,14 +653,14 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="665,4263" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="866,7816" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence DisplayName="Sequence -CleanUp" sap:VirtualizedContainerService.HintSize="603,406" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                    <Sequence DisplayName="Sequence -CleanUp" sap:VirtualizedContainerService.HintSize="804,406" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -684,7 +684,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </iu:Kill_Application>
                                     </Sequence>
-                                    <Sequence DisplayName="Log Job Basic Info" sap:VirtualizedContainerService.HintSize="603,514" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                    <Sequence DisplayName="Log Job Basic Info" sap:VirtualizedContainerService.HintSize="804,514" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -709,7 +709,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:LogMessage>
                                     </Sequence>
-                                    <Sequence DisplayName="Read Configuration" sap:VirtualizedContainerService.HintSize="603,2410" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                    <Sequence DisplayName="Read Configuration" sap:VirtualizedContainerService.HintSize="804,2410" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -884,28 +884,28 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:MultipleAssign>
                                     </Sequence>
-                                    <Sequence DisplayName="Map Share Drive" sap:VirtualizedContainerService.HintSize="603,57" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                    <Sequence DisplayName="Map Share Drive" sap:VirtualizedContainerService.HintSize="804,3610" sap2010:WorkflowViewState.IdRef="Sequence_68">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[Convert.ToBoolean(Config(&quot;AP_SharedDrive_MappingScript_Flag&quot;))]" DisplayName="If - Enable/ Disable Mapping Script" sap:VirtualizedContainerService.HintSize="642,2472" sap2010:WorkflowViewState.IdRef="If_22">
+                                      <If Condition="[Convert.ToBoolean(Config(&quot;AP_SharedDrive_MappingScript_Flag&quot;))]" DisplayName="If - Enable/ Disable Mapping Script" sap:VirtualizedContainerService.HintSize="742,3490" sap2010:WorkflowViewState.IdRef="If_22">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <Sequence DisplayName="Then - Mapping Enabled" sap:VirtualizedContainerService.HintSize="608,2059" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                          <Sequence DisplayName="Then - Mapping Enabled" sap:VirtualizedContainerService.HintSize="708,3077" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message - &quot;Shared Drive Mapping script is [Enabled]&quot;" sap:VirtualizedContainerService.HintSize="546,173" sap2010:WorkflowViewState.IdRef="LogMessage_56" Level="Info" Message="[&quot;Shared Drive Mapping script is [Enabled]&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message - &quot;Shared Drive Mapping script is [Enabled]&quot;" sap:VirtualizedContainerService.HintSize="646,173" sap2010:WorkflowViewState.IdRef="LogMessage_56" Level="Info" Message="[&quot;Shared Drive Mapping script is [Enabled]&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -913,7 +913,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:LogMessage>
-                                            <ui:LogMessage DisplayName="Log Message - &quot;Mapping Shared Path: [&quot;+config(&quot;AP_SharedDrive_ActutalMappingPath&quot;).ToString+&quot;]&quot;" sap:VirtualizedContainerService.HintSize="546,173" sap2010:WorkflowViewState.IdRef="LogMessage_57" Level="Info" Message="[&quot;Mapping Shared Path: [&quot;+config(&quot;AP_SharedDrive_ActutalMappingPath&quot;).ToString+&quot;]&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message - &quot;Mapping Shared Path: [&quot;+config(&quot;AP_SharedDrive_ActutalMappingPath&quot;).ToString+&quot;]&quot;" sap:VirtualizedContainerService.HintSize="646,173" sap2010:WorkflowViewState.IdRef="LogMessage_57" Level="Info" Message="[&quot;Mapping Shared Path: [&quot;+config(&quot;AP_SharedDrive_ActutalMappingPath&quot;).ToString+&quot;]&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -921,7 +921,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:LogMessage>
-                                            <ui:LogMessage DisplayName="Log Message - &quot;Shared Drive UNC path: [&quot;+config(&quot;AP_SharedDrive_UNC&quot;).ToString+&quot;]&quot;" sap:VirtualizedContainerService.HintSize="546,173" sap2010:WorkflowViewState.IdRef="LogMessage_58" Level="Info" Message="[&quot;Shared Drive UNC path: [&quot;+config(&quot;AP_SharedDrive_UNC&quot;).ToString+&quot;]&quot;]">
+                                            <ui:LogMessage DisplayName="Log Message - &quot;Shared Drive UNC path: [&quot;+config(&quot;AP_SharedDrive_UNC&quot;).ToString+&quot;]&quot;" sap:VirtualizedContainerService.HintSize="646,173" sap2010:WorkflowViewState.IdRef="LogMessage_58" Level="Info" Message="[&quot;Shared Drive UNC path: [&quot;+config(&quot;AP_SharedDrive_UNC&quot;).ToString+&quot;]&quot;]">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -929,7 +929,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:LogMessage>
-                                            <If Condition="[system.io.Directory.Exists(config(&quot;AP_SharedDrive_MappingDriveLetter&quot;).ToString + &quot;:\&quot;)]" DisplayName="If - Mapping Check" sap:VirtualizedContainerService.HintSize="546,1452" sap2010:WorkflowViewState.IdRef="If_21">
+                                            <If Condition="[system.io.Directory.Exists(config(&quot;AP_SharedDrive_MappingDriveLetter&quot;).ToString + &quot;:\&quot;)]" DisplayName="If - Mapping Check" sap:VirtualizedContainerService.HintSize="646,2470" sap2010:WorkflowViewState.IdRef="If_21">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -955,73 +955,121 @@
                                                 </Sequence>
                                               </If.Then>
                                               <If.Else>
-                                                <Sequence DisplayName="Else - Mapping Drive" sap:VirtualizedContainerService.HintSize="512,1039" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                <Sequence DisplayName="Else - Mapping Drive" sap:VirtualizedContainerService.HintSize="612,2057" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <iu:Map_Share_Drive DisplayName="Map Share Drive (Map_Share_Drive)" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Map_Share_Drive_3" MappingStatus="[str_MappingStatus]" OverwriteShareDrivePath="[config(&quot;AP_SharedDrive_ActutalMappingPath&quot;).ToString]" OverwriteUNCPath="[config(&quot;AP_SharedDrive_UNC&quot;).ToString]">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                  </iu:Map_Share_Drive>
-                                                  <If sap2010:Annotation.AnnotationText="Check if Network share drive is connected successfully. Else throw an exception." Condition="[str_MappingStatus.ToUpper.ToString.Contains(&quot;NOT&quot;)]" DisplayName="Handle Share drive connection status and throwing exception" sap:VirtualizedContainerService.HintSize="450,829" sap2010:WorkflowViewState.IdRef="If_20">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <If.Then>
-                                                      <Sequence DisplayName="Then - Not Connected" sap:VirtualizedContainerService.HintSize="416,374" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="550,1969" sap2010:WorkflowViewState.IdRef="TryCatch_16">
+                                                    <TryCatch.Try>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="512,1192" sap2010:WorkflowViewState.IdRef="Sequence_86">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:LogMessage DisplayName="Log Message - &quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Error" Message="[&quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus]">
+                                                        <iu:Map_Share_Drive ConnectionTimeout="[TimeSpan.FromSeconds(60)]" DisplayName="Map Share Drive" sap:VirtualizedContainerService.HintSize="450,275" sap2010:WorkflowViewState.IdRef="Map_Share_Drive_2" MappingStatus="[str_MappingStatus]" ShareDrivePath="[Config(&quot;AP_SharedDrive_ActutalMappingPath&quot;).ToString]" UNCPath="[Config(&quot;AP_SharedDrive_UNC&quot;).ToString]">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                        </ui:LogMessage>
-                                                        <Throw DisplayName="Throw - new Exception(&quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus)" Exception="[new Exception(&quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_5">
+                                                        </iu:Map_Share_Drive>
+                                                        <If sap2010:Annotation.AnnotationText="Check if Network share drive is connected successfully. Else throw an exception." Condition="[str_MappingStatus.ToUpper.ToString.Contains(&quot;NOT&quot;)]" DisplayName="Handle Share drive connection status and throwing exception" sap:VirtualizedContainerService.HintSize="450,829" sap2010:WorkflowViewState.IdRef="If_20">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                        </Throw>
-                                                      </Sequence>
-                                                    </If.Then>
-                                                    <If.Else>
-                                                      <Sequence DisplayName="Else - Connected" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_64">
-                                                        <sap:WorkflowViewStateService.ViewState>
-                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                          </scg:Dictionary>
-                                                        </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:LogMessage DisplayName="Log Message - &quot;Network Shared drive has been connected successfully. | Mapping status: &quot;+str_MappingStatus" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;Network Shared drive has been connected successfully. | Mapping status: &quot;+str_MappingStatus]">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                        </ui:LogMessage>
+                                                          <If.Then>
+                                                            <Sequence DisplayName="Then - Not Connected" sap:VirtualizedContainerService.HintSize="416,374" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message - &quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Error" Message="[&quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus]">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:LogMessage>
+                                                              <Throw DisplayName="Throw - new Exception(&quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus)" Exception="[new Exception(&quot;Network Shared drive mapping failed. | Mapping status: &quot;+str_MappingStatus)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_5">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </Throw>
+                                                            </Sequence>
+                                                          </If.Then>
+                                                          <If.Else>
+                                                            <Sequence DisplayName="Else - Connected" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message - &quot;Network Shared drive has been connected successfully. | Mapping status: &quot;+str_MappingStatus" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;Network Shared drive has been connected successfully. | Mapping status: &quot;+str_MappingStatus]">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:LogMessage>
+                                                            </Sequence>
+                                                          </If.Else>
+                                                        </If>
                                                       </Sequence>
-                                                    </If.Else>
-                                                  </If>
+                                                    </TryCatch.Try>
+                                                    <TryCatch.Catches>
+                                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516,444" sap2010:WorkflowViewState.IdRef="Catch`1_16">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ActivityAction x:TypeArguments="s:Exception">
+                                                          <ActivityAction.Argument>
+                                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                          </ActivityAction.Argument>
+                                                          <Sequence sap:VirtualizedContainerService.HintSize="416,374" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:LogMessage DisplayName="Log Message -&quot;Network Shared drive mapping failed. &quot;" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_73" Level="Error" Message="[&quot;Network Shared drive mapping failed. &quot;]">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </ui:LogMessage>
+                                                            <Throw DisplayName="Throw -New Exception(&quot;Network Shared drive mapping failed.&quot;)" Exception="[New Exception(&quot;Network Shared drive mapping failed.&quot;)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_6">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </Throw>
+                                                          </Sequence>
+                                                        </ActivityAction>
+                                                      </Catch>
+                                                    </TryCatch.Catches>
+                                                  </TryCatch>
                                                 </Sequence>
                                               </If.Else>
                                             </If>
@@ -1047,7 +1095,7 @@
                                         </If.Else>
                                       </If>
                                     </Sequence>
-                                    <iu:Manage_Folder DisplayName="Manage Folder" FolderPath="[Config(&quot;AP_Local_MasterFolder&quot;).ToString]" FolderPathCollection="[New List(Of string)]" sap:VirtualizedContainerService.HintSize="603,249" sap2010:WorkflowViewState.IdRef="Manage_Folder_1" TargetAction="Both">
+                                    <iu:Manage_Folder DisplayName="Manage Folder" FolderPath="[Config(&quot;AP_Local_MasterFolder&quot;).ToString]" FolderPathCollection="[New List(Of string)]" sap:VirtualizedContainerService.HintSize="804,249" sap2010:WorkflowViewState.IdRef="Manage_Folder_1" TargetAction="Both">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1055,7 +1103,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </iu:Manage_Folder>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_CreateStagingLog - Invoke Workflow File (Workflows\Utility\AP_CreateStagingLog.xaml)" sap:VirtualizedContainerService.HintSize="603,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Workflows\Utility\AP_CreateStagingLog.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_CreateStagingLog - Invoke Workflow File (Workflows\Utility\AP_CreateStagingLog.xaml)" sap:VirtualizedContainerService.HintSize="804,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="Workflows\Utility\AP_CreateStagingLog.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                         <InArgument x:TypeArguments="ui:CurrentJobInfo" x:Key="in_JobData">[JobData]</InArgument>
