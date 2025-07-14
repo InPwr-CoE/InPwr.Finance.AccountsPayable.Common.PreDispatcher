@@ -35,6 +35,122 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Utility/AP_CreateStagingLog.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Arr_VendorType&Sequence_4",
+        "str_LogDateFormat&Sequence_4",
+        "str_ExceptionLogFile&Sequence_4",
+        "str_SuccessLogFile&Sequence_4",
+        "str_TemplateLogFilePath&Sequence_4",
+        "str_UpdatedSuccessLogFile&Sequence_34"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_JobData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Mail/AP_FetchMailsAddtoQueue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_MailSearchQuery&Sequence_63",
+        "str_o365ApplicationId&Sequence_63",
+        "secstr_o365ApplicationSecret&Sequence_63",
+        "arr_MailsFetched&Sequence_63",
+        "str_ToPeriod&Sequence_63",
+        "str_FromPeriod&Sequence_63",
+        "arr_invoicekeywords&Sequence_68",
+        "int_CountOfMovedItems&Sequence_68",
+        "dic_MailMetaData&Sequence_62",
+        "bool_HasPDFAttachment&Sequence_62",
+        "bool_ContainsInvoiceKeyword&Sequence_62"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Config",
+        "in_TenantName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dic_VendorInformation&Sequence_1",
+        "str_ErrorMessage&Sequence_1",
+        "str_DestinationMailFolder&Sequence_1",
+        "str_MailSearchQuery&Sequence_1",
+        "str_o365ApplicationId&Sequence_1",
+        "secstr_o365ApplicationSecret&Sequence_1",
+        "arr_emailsfetched&Sequence_1",
+        "str_EntityResponse&Sequence_1",
+        "str_RuntimeLogFilePath&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config",
+        "in_JobData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Mail/AP_GetVendorInformation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_SenderDomain&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_dicVendorInformation",
+        "out_strErrorMessage",
+        "out_DestinationMailFolder",
+        "in_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Core Validation/AP_SenderDomainValidation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_EntityResponse&Sequence_1",
+        "str_EntityName&Sequence_1",
+        "arr_VendorEntities&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dicVendorInformation",
+        "out_DestinationMailFolder",
+        "in_Config",
+        "in_strSenderDomain",
+        "out_strErrorMessage"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Core Validation/AP_SubjectValidation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_EntityResponse&Sequence_1",
+        "listRegxSubject&Sequence_1",
+        "str_EntityName&Sequence_1",
+        "arr_VendorEntities&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dicVendorInformation",
+        "out_DestinationMailFolder",
+        "in_Config",
+        "in_MailSubject",
+        "out_strErrorMessage"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }

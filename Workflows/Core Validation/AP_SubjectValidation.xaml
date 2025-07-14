@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>943,4386</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>924,3816</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AP_SubjectValidation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -164,7 +164,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Input: &#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_MailSubject: Mail Subject of current processing mail.&#xA;&#xA;Description: This workflow is get Vendor Information based on Mail Subject validation.&#xA;&#xA;Output:&#xA;1) out_dicVendorInformation: Returns the vendor information as a dictionary based on Sender domain or Subject validation.&#xA;2) out_strErrorMessage: Retruns the encountered Error message while validating Subject and Domain validation.&#xA;3) out_DestinationMailFolder: Retruns the mail destination folder name if any exception occured." DisplayName="AP_SubjectValidation" sap:VirtualizedContainerService.HintSize="795,4281" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Input: &#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_MailSubject: Mail Subject of current processing mail.&#xA;&#xA;Description: This workflow is get Vendor Information based on Mail Subject validation.&#xA;&#xA;Output:&#xA;1) out_dicVendorInformation: Returns the vendor information as a dictionary based on Sender domain or Subject validation.&#xA;2) out_strErrorMessage: Retruns the encountered Error message while validating Subject and Domain validation.&#xA;3) out_DestinationMailFolder: Retruns the mail destination folder name if any exception occured." DisplayName="AP_SubjectValidation" sap:VirtualizedContainerService.HintSize="795,3751" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_EntityResponse" />
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="listRegxSubject" />
@@ -233,7 +233,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:Matches>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="1) Check if Entity Response for Sender domain is found.&#xA;1.0) If Response is not found then set the Error message and reset the dictionary.&#xA;1.1) If Response is found, then convert the datarow as dictionary.&#xA;" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="733,3281" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="1) Check if Entity Response for Sender domain is found.&#xA;1.0) If Response is not found then set the Error message and reset the dictionary.&#xA;1.1) If Response is found, then convert the datarow as dictionary.&#xA;" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="733,2751" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -241,7 +241,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[listRegxSubject.Count &gt; 0]" DisplayName="Handle if Vendor name exist in Subject with condition and set the Error message" sap:VirtualizedContainerService.HintSize="671,3089" sap2010:WorkflowViewState.IdRef="If_3">
+      <If Condition="[listRegxSubject.Count &gt; 0]" DisplayName="Handle if Vendor name exist in Subject with condition and set the Error message" sap:VirtualizedContainerService.HintSize="671,2559" sap2010:WorkflowViewState.IdRef="If_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -357,7 +357,7 @@
                             <OutArgument x:TypeArguments="x:String">[out_strErrorMessage]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[in_Config("AP_ExceptionLogMessage_Subject").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[in_Config("AP_ExceptionLogMessage_VendorNotFound").ToString]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_53">
@@ -365,7 +365,7 @@
                             <OutArgument x:TypeArguments="x:String">[out_DestinationMailFolder]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[in_Config("AP_O365_MailFolder_Excluded").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[in_Config("AP_O365_MailFolder_ManualReview").ToString]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                       </scg:List>
@@ -412,7 +412,7 @@
                             <OutArgument x:TypeArguments="x:String">[out_strErrorMessage]</OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:String">[If(out_dicVendorInformation("IsVendorExcluded").ToUpper.Equals("TRUE"),in_Config("AP_ExceptionLogMessage_SubjectExcluded").ToString,String.Empty)]</InArgument>
+                            <InArgument x:TypeArguments="x:String">[If(out_dicVendorInformation("IsVendorExcluded").ToUpper.Equals("TRUE"),in_Config("AP_ExceptionLogMessage_VendorExcluded").ToString,String.Empty)]</InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_56">
@@ -446,14 +446,14 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else- Vendor not exist" sap:VirtualizedContainerService.HintSize="541,555" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Else- Vendor not exist in Subject Format" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign - Error Message: Vendor not found in Entity" sap:VirtualizedContainerService.HintSize="479,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
+            <ui:MultipleAssign DisplayName="Multiple Assign - Error Message: Invalid Subject Format" sap:VirtualizedContainerService.HintSize="479,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_57">
@@ -493,7 +493,7 @@
                       <OutArgument x:TypeArguments="x:String">[out_strErrorMessage]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_Config("AP_ExceptionLogMessage_Subject").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_Config("AP_ExceptionLogMessage_SubjectFormat").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_62">
@@ -501,7 +501,7 @@
                       <OutArgument x:TypeArguments="x:String">[out_DestinationMailFolder]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_Config("AP_O365_MailFolder_Excluded").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_Config("AP_O365_MailFolder_ManualReview").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                 </scg:List>

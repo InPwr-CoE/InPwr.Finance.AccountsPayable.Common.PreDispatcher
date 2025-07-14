@@ -12,7 +12,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>943,3430</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>924,3430</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AP_SenderDomainValidation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -158,7 +158,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Input: &#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_SenderDomain: Mail Sender domain name of current queue message.&#xA;&#xA;Description: This workflow is get Vendor Information based on Sender Domain validation.&#xA;&#xA;Output:&#xA;1) out_dicVendorInformation: Returns the vendor information as a dictionary based on Sender domain or Subject validation.&#xD;&#xA;2) out_strErrorMessage: Returns the exception message if any error encountered.&#xA;3) out_DestinationMailFolder: Retruns the mail destination folder name if any exception occured.&#xD;&#xA;&#xA;" DisplayName="AP_SenderDomainValidation" sap:VirtualizedContainerService.HintSize="699,3365" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Input: &#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_SenderDomain: Mail Sender domain name of current queue message.&#xA;&#xA;Description: This workflow is get Vendor Information based on Sender Domain validation.&#xA;&#xA;Output:&#xA;1) out_dicVendorInformation: Returns the vendor information as a dictionary based on Sender domain or Subject validation.&#xA;2) out_strErrorMessage: Returns the exception message if any error encountered.&#xA;3) out_DestinationMailFolder: Retruns the mail destination folder name if any exception occured.&#xA;&#xA;" DisplayName="AP_SenderDomainValidation" sap:VirtualizedContainerService.HintSize="699,3365" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_EntityResponse" />
       <Variable x:TypeArguments="x:String" Name="str_EntityName" />
@@ -251,7 +251,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[dt_EntityResponse Is Nothing]" DisplayName="Handle Entity response conditions and set Error message" sap:VirtualizedContainerService.HintSize="575,1239" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[dt_EntityResponse Is Nothing]" DisplayName="Handle Entity response conditions and set Error message" sap:VirtualizedContainerService.HintSize="575,1262" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -307,7 +307,7 @@
                       <OutArgument x:TypeArguments="x:String">[out_strErrorMessage]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_Config("AP_ExceptionLogMessage_Domain").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_Config("AP_ExceptionLogMessage_DomainNotFound").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
@@ -315,7 +315,7 @@
                       <OutArgument x:TypeArguments="x:String">[out_DestinationMailFolder]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_Config("AP_O365_MailFolder_Excluded").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_Config("AP_O365_MailFolder_ManualReview").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                 </scg:List>
@@ -362,7 +362,7 @@
                       <OutArgument x:TypeArguments="x:String">[out_strErrorMessage]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[If(out_dicVendorInformation("IsVendorExcluded").ToUpper.Equals("TRUE"),in_Config("AP_ExceptionLogMessage_DomainExcluded").ToString,String.Empty)]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[If(out_dicVendorInformation("IsVendorExcluded").ToUpper.Equals("TRUE"),in_Config("AP_ExceptionLogMessage_VendorExcluded").ToString,String.Empty)]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
