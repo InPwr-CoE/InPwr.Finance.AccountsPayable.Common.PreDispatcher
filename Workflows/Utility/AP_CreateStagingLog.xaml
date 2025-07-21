@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>943,1987</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,2069</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AP_TEMP_GetMail</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -153,13 +153,14 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_JobData: Get current job information (Process and Tenant name) to create Runtime folder path.&#xA;&#xA;Description : This Workflow used to create Runtime Email Staging log file using template excel with the runtime format. &lt;YYMMMDD&gt;_Runtime Email Staging Log.xlsx&#xA;" DisplayName="AP_CreateStagingLog" sap:VirtualizedContainerService.HintSize="654,1922" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_JobData: Get current job information (Process and Tenant name) to create Runtime folder path.&#xA;&#xA;Description : This Workflow used to create Runtime Email Staging log file using template excel with the runtime format. &lt;YYMMMDD&gt;_Runtime Email Staging Log.xlsx&#xA;" DisplayName="AP_CreateStagingLog" sap:VirtualizedContainerService.HintSize="654,2004" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="Arr_VendorType" />
       <Variable x:TypeArguments="x:String" Name="str_LogDateFormat" />
       <Variable x:TypeArguments="x:String" Name="str_ExceptionLogFile" />
       <Variable x:TypeArguments="x:String" Name="str_SuccessLogFile" />
       <Variable x:TypeArguments="x:String" Name="str_TemplateLogFilePath" />
+      <Variable x:TypeArguments="x:String" Name="str_ExceptionTemplateLog" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -176,7 +177,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence sap2010:Annotation.AnnotationText="Initialize Success and Exception Log file path.&#xA;Create a copy of Exception Log file from Template log file." DisplayName="Input Validation Stage" sap:VirtualizedContainerService.HintSize="592,598" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence sap2010:Annotation.AnnotationText="Initialize Success and Exception Log file path.&#xA;Create a copy of Exception Log file from Template log file." DisplayName="Input Validation Stage" sap:VirtualizedContainerService.HintSize="592,680" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -184,7 +185,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign - Initialize" sap:VirtualizedContainerService.HintSize="479,272" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign DisplayName="Multiple Assign - Initialize" sap:VirtualizedContainerService.HintSize="479,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -193,6 +194,14 @@
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="x:String">[in_Config("AP_SharedDrive_RuntimeLog_Template").ToString.Replace("&lt;TenantName&gt;",in_JobData.TenantName)]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[str_ExceptionTemplateLog]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[in_Config("AP_SharedDrive_ExceptionLog_Template").ToString.Replace("&lt;TenantName&gt;",in_JobData.TenantName)]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -235,7 +244,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <iu:Copy_File DestinationFilePath="[str_ExceptionLogFile]" DisplayName="Copy File - Template as &quot;Exception&quot;" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="Copy_File_2" SourceFilePath="[str_TemplateLogFilePath]">
+      <iu:Copy_File Overwrite="{x:Null}" DestinationFilePath="[str_ExceptionLogFile]" DisplayName="Copy File - Template as &quot;Exception&quot;" sap:VirtualizedContainerService.HintSize="479,215" sap2010:WorkflowViewState.IdRef="Copy_File_2" SourceFilePath="[str_ExceptionTemplateLog]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -287,7 +296,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <iu:Copy_File DestinationFilePath="[str_UpdatedSuccessLogFile]" DisplayName="Copy File - Template as &quot;Success&quot;" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="Copy_File_3" SourceFilePath="[str_TemplateLogFilePath]">
+              <iu:Copy_File Overwrite="{x:Null}" DestinationFilePath="[str_UpdatedSuccessLogFile]" DisplayName="Copy File - Template as &quot;Success&quot;" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="Copy_File_3" SourceFilePath="[str_TemplateLogFilePath]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">True</x:Boolean>

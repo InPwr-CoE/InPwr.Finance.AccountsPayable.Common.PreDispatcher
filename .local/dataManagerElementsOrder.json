@@ -151,6 +151,29 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Utility/AP_UpdateStaging_ExceptionLog.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_ExistingRuntimeLog&Sequence_4",
+        "str_ExistingPrimaryKey&Sequence_4",
+        "str_NewPrimaryKey&Sequence_4",
+        "str_LogDateFormat&Sequence_4",
+        "str_ExceptionLogFile&Sequence_4",
+        "str_DriveFolderPath&Sequence_4",
+        "str_DriveLetter&Sequence_4",
+        "str_LocalFilePath&Sequence_4",
+        "str_LocalFolderPath&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_strErrorMessage",
+        "in_MailMessage",
+        "in_TenantName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
