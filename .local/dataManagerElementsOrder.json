@@ -40,6 +40,7 @@
       "Path": "Workflows/Utility/AP_CreateStagingLog.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_ExceptionTemplateLog&Sequence_4",
         "Arr_VendorType&Sequence_4",
         "str_LogDateFormat&Sequence_4",
         "str_ExceptionLogFile&Sequence_4",
@@ -58,14 +59,14 @@
       "Path": "Workflows/Mail/AP_FetchMailsAddtoQueue.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "int_CountOfMovedItems&Sequence_63",
+        "arr_invoicekeywords&Sequence_63",
         "str_MailSearchQuery&Sequence_63",
         "str_o365ApplicationId&Sequence_63",
         "secstr_o365ApplicationSecret&Sequence_63",
         "arr_MailsFetched&Sequence_63",
         "str_ToPeriod&Sequence_63",
         "str_FromPeriod&Sequence_63",
-        "arr_invoicekeywords&Sequence_68",
-        "int_CountOfMovedItems&Sequence_68",
         "dic_MailMetaData&Sequence_62",
         "bool_HasPDFAttachment&Sequence_62",
         "bool_ContainsInvoiceKeyword&Sequence_62"
@@ -156,9 +157,9 @@
       "Path": "Workflows/Utility/AP_UpdateStaging_ExceptionLog.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_NewMailKey&Sequence_4",
+        "str_ExistingMailKey&Sequence_4",
         "dt_ExistingRuntimeLog&Sequence_4",
-        "str_ExistingPrimaryKey&Sequence_4",
-        "str_NewPrimaryKey&Sequence_4",
         "str_LogDateFormat&Sequence_4",
         "str_ExceptionLogFile&Sequence_4",
         "str_DriveFolderPath&Sequence_4",
@@ -171,6 +172,57 @@
         "in_strErrorMessage",
         "in_MailMessage",
         "in_TenantName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_MailSearchQuery&Flowchart_2",
+        "arr_emailsfetched&Flowchart_2",
+        "QueueRetry&Flowchart_2",
+        "ScreenshotPath&Flowchart_2",
+        "str_o365ApplicationId&Flowchart_2",
+        "secstr_o365ApplicationSecret&Flowchart_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions",
+        "in_ExceptionTable"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Utility/AP_UpdateStagingLog.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_RuntimeSheetName&Sequence_4",
+        "dt_ExistingRuntimeLog&Sequence_4",
+        "str_ExistingPrimaryKey&Sequence_4",
+        "str_NewPrimaryKey&Sequence_4",
+        "str_LogDateFormat&Sequence_4",
+        "str_ExceptionLogFile&Sequence_4",
+        "str_SuccessLogFile&Sequence_4",
+        "str_DriveFolderPath&Sequence_4",
+        "str_DriveLetter&Sequence_4",
+        "str_LocalFilePath&Sequence_4",
+        "str_LocalFolderPath&Sequence_4",
+        "str_DriveFilePath&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_dicVendorInformation",
+        "in_strErrorMessage",
+        "in_TransactionItem",
+        "in_JobData"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

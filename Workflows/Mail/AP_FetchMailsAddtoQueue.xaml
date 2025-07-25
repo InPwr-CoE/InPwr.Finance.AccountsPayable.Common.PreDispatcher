@@ -3,7 +3,7 @@
     <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_TenantName" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1006,4765</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1152,3901.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -191,7 +191,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) Config: Response from Intialize Configuration activity as a dictionary.&#xA;&#xA;Description: This workflow is used to read Mails from Inbox of Accounting@Inpwr.com and add read Maild to AP_PreDispatcherQueue&#xA;" DisplayName="AccountsPayable_Fetch Mails_Add to Queue" sap:VirtualizedContainerService.HintSize="1016,4700" sap2010:WorkflowViewState.IdRef="Sequence_63">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) Config: Response from Intialize Configuration activity as a dictionary.&#xA;&#xA;Description: This workflow is used to read Mails from Inbox of Accounting@Inpwr.com and add read Maild to AP_PreDispatcherQueue&#xA;" DisplayName="AccountsPayable_Fetch Mails_Add to Queue" sap:VirtualizedContainerService.HintSize="670,3836.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_63">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_MailSearchQuery" />
       <Variable x:TypeArguments="x:String" Name="str_o365ApplicationId" />
@@ -209,16 +209,16 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: Started&quot;" sap:VirtualizedContainerService.HintSize="954,173" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Started&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="The OData Filter Query for Filtering Emails between two time periods of Datetime and has attachments. The Time periods are of format yyyy-MM-ddTHH:mm:ssZ.&#xA;&#xA;" DisplayName="Frame Mail Search Query" sap:VirtualizedContainerService.HintSize="954,597" sap2010:WorkflowViewState.IdRef="Sequence_64">
+    <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: Started&quot;" sap:VirtualizedContainerService.HintSize="608,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Started&quot;]" />
+    <Sequence sap2010:Annotation.AnnotationText="The OData Filter Query for Filtering Emails between two time periods of Datetime and has attachments. The Time periods are of format yyyy-MM-ddTHH:mm:ssZ.&#xA;&#xA;" DisplayName="Frame Mail Search Query" sap:VirtualizedContainerService.HintSize="608,152.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_64">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign Search Query Values" sap:VirtualizedContainerService.HintSize="479,241" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Multiple Assign Search Query Values" sap:VirtualizedContainerService.HintSize="478.6666666666667,241.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -262,31 +262,31 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
-      <ui:LogMessage DisplayName="Log Message Mail Search Query" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Mail Search Query : &quot;+str_MailSearchQuery]" />
+      <ui:LogMessage DisplayName="Log Message Mail Search Query" sap:VirtualizedContainerService.HintSize="478.6666666666667,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Mail Search Query : &quot;+str_MailSearchQuery]" />
     </Sequence>
-    <Sequence DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="954,3591" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="608,3140" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch - Mailbox Connection and Read mails" sap:VirtualizedContainerService.HintSize="892,57" sap2010:WorkflowViewState.IdRef="TryCatch_19">
+      <TryCatch DisplayName="Try Catch - Mailbox Connection and Read mails" sap:VirtualizedContainerService.HintSize="546,1551.3333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_19">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <Sequence sap:VirtualizedContainerService.HintSize="416,733" sap2010:WorkflowViewState.IdRef="Sequence_75">
+          <Sequence sap:VirtualizedContainerService.HintSize="416,748" sap2010:WorkflowViewState.IdRef="Sequence_75">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]" />
-            <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="[CInt(Config(&quot;AP_O365_MailReadLimit&quot;))]" Emailfolder="[Config(&quot;AP_O365_MailFolder_Input&quot;).ToString]" EmailsRead="[arr_MailsFetched]" sap:VirtualizedContainerService.HintSize="354,470" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" MarkAsRead="False" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Tenant="[Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]" />
+            <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="[CInt(Config(&quot;AP_O365_MailReadLimit&quot;))]" Emailfolder="[Config(&quot;AP_O365_MailFolder_Input&quot;).ToString]" EmailsRead="[arr_MailsFetched]" sap:VirtualizedContainerService.HintSize="354,483.3333333333333" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" MarkAsRead="False" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Tenant="[Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -297,7 +297,7 @@
           </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,444" sap2010:WorkflowViewState.IdRef="Catch`1_20">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,451.3333333333333" sap2010:WorkflowViewState.IdRef="Catch`1_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -308,21 +308,21 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Catch - Read Mails" sap:VirtualizedContainerService.HintSize="416,374" sap2010:WorkflowViewState.IdRef="Sequence_76">
+              <Sequence DisplayName="Catch - Read Mails" sap:VirtualizedContainerService.HintSize="416,379.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_76">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - &quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_73" Level="Error" Message="[&quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message]">
+                <ui:LogMessage DisplayName="Log Message - &quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_73" Level="Error" Message="[&quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <Throw DisplayName="Throw  - New Exception(&quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message)" Exception="[New Exception(&quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_1">
+                <Throw DisplayName="Throw  - New Exception(&quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message)" Exception="[New Exception(&quot;Failed to Connect Mailbox or unable to read mails | Exception Message: &quot;+Exception.Message)]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -334,8 +334,8 @@
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:LogMessage DisplayName="Log Message Number of Emails" sap:VirtualizedContainerService.HintSize="892,173" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[String.Format(&quot;Fetched {0} mails &quot;,arr_MailsFetched.Count.ToString)]" />
-      <If Condition="[arr_MailsFetched.Count &gt; 0]" DisplayName="Handle Email condition and Add to PreDispatcher Queue" sap:VirtualizedContainerService.HintSize="892,3241" sap2010:WorkflowViewState.IdRef="If_1">
+      <ui:LogMessage DisplayName="Log Message Number of Emails" sap:VirtualizedContainerService.HintSize="546,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="Info" Message="[String.Format(&quot;Fetched {0} mails &quot;,arr_MailsFetched.Count.ToString)]" />
+      <If Condition="[arr_MailsFetched.Count &gt; 0]" DisplayName="Handle Email condition and Add to PreDispatcher Queue" sap:VirtualizedContainerService.HintSize="546,1292" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -343,14 +343,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Emails Exist" sap:VirtualizedContainerService.HintSize="858,2828" sap2010:WorkflowViewState.IdRef="Sequence_66">
+          <Sequence DisplayName="Emails Exist" sap:VirtualizedContainerService.HintSize="512,874" sap2010:WorkflowViewState.IdRef="Sequence_66">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Assign  int_CountOfMovedItems" sap:VirtualizedContainerService.HintSize="796,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Assign  int_CountOfMovedItems" sap:VirtualizedContainerService.HintSize="450,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[int_CountOfMovedItems]</OutArgument>
               </Assign.To>
@@ -358,13 +358,13 @@
                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="umm:Office365Message" CurrentIndex="{x:Null}" DisplayName="For Each Office365Message" sap:VirtualizedContainerService.HintSize="796,1907" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arr_MailsFetched]">
+            <ui:ForEach x:TypeArguments="umm:Office365Message" CurrentIndex="{x:Null}" DisplayName="For Each Office365Message" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[arr_MailsFetched]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="umm:Office365Message">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="umm:Office365Message" Name="currentOffice365Message" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="762,1761" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="762.6666666666666,2056" sap2010:WorkflowViewState.IdRef="Sequence_62">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dic_MailMetaData" />
                       <Variable x:TypeArguments="x:Boolean" Name="bool_HasPDFAttachment" />
@@ -376,7 +376,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch - Each Mail from Inbox" sap:VirtualizedContainerService.HintSize="700,1673" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+                    <TryCatch DisplayName="Try Catch - Each Mail from Inbox" sap:VirtualizedContainerService.HintSize="700.6666666666666,1968" sap2010:WorkflowViewState.IdRef="TryCatch_18">
                       <TryCatch.Try>
                         <Sequence DisplayName="Sequence- Current Mail from Inbox" sap:VirtualizedContainerService.HintSize="662,736" sap2010:WorkflowViewState.IdRef="Sequence_72">
                           <sap:WorkflowViewStateService.ViewState>
@@ -397,15 +397,15 @@
                             <Flowchart.StartNode>
                               <x:Reference>__ReferenceID7</x:Reference>
                             </Flowchart.StartNode>
-                            <FlowDecision x:Name="__ReferenceID7" Condition="[String.IsNullOrEmpty(currentOffice365Message.Subject) Or String.IsNullOrWhiteSpace(currentOffice365Message.Subject)]" DisplayName="Subject is Empty?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <FlowDecision x:Name="__ReferenceID7" Condition="[String.IsNullOrEmpty(currentOffice365Message.Subject) Or String.IsNullOrWhiteSpace(currentOffice365Message.Subject)]" DisplayName="Subject is Empty?" sap:VirtualizedContainerService.HintSize="60.666666666666664,60.666666666666664" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">270,150</av:Point>
-                                  <av:Size x:Key="ShapeSize">59,59</av:Size>
+                                  <av:Size x:Key="ShapeSize">60.666666666666664,60.666666666666664</av:Size>
                                   <av:PointCollection x:Key="TrueConnector">270,179.5 240,179.5 240,180 115,180</av:PointCollection>
-                                  <av:PointCollection x:Key="FalseConnector">329,179.5 359,179.5 359,180 435,180</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">330.6666666666667,180.33333333333334 360.6666666666667,180.33333333333334 360.6666666666667,180 435,180</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowDecision.True>
@@ -434,7 +434,7 @@
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">435,145</av:Point>
                                       <av:Size x:Key="ShapeSize">110,70</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">490,215 490,319.5 329,319.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">490,215 490,320.3333333333333 330.6666666666667,320.3333333333333</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Sequence DisplayName="Boolean Assign - PDF and Keyword " sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_78">
@@ -469,27 +469,27 @@
                                     <ui:LogMessage DisplayName="Log Message - string.format(&quot;Email with Subject : [{0}] --&gt; HasPDFAttachment : {1} , HasInvoiceKeyword : {2}&quot;,currentOffice365Message.Subject,bool_HasPDFAttachment.ToString,bool_ContainsInvoiceKeyword.ToString)" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[string.format(&quot;Email with Subject : [{0}] --&gt; HasPDFAttachment : {1} , HasInvoiceKeyword : {2}&quot;,currentOffice365Message.Subject,bool_HasPDFAttachment.ToString,bool_ContainsInvoiceKeyword.ToString)]" />
                                   </Sequence>
                                   <FlowStep.Next>
-                                    <FlowDecision x:Name="__ReferenceID2" Condition="[bool_ContainsInvoiceKeyword]" DisplayName="Invoice Keyword in Subject?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                    <FlowDecision x:Name="__ReferenceID2" Condition="[bool_ContainsInvoiceKeyword]" DisplayName="Invoice Keyword in Subject?" sap:VirtualizedContainerService.HintSize="60.666666666666664,60.666666666666664" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           <av:Point x:Key="ShapeLocation">270,290</av:Point>
-                                          <av:Size x:Key="ShapeSize">59,59</av:Size>
-                                          <av:PointCollection x:Key="TrueConnector">299.5,349 299.5,460</av:PointCollection>
+                                          <av:Size x:Key="ShapeSize">60.666666666666664,60.666666666666664</av:Size>
+                                          <av:PointCollection x:Key="TrueConnector">300.3333333333333,350.6666666666667 300.3333333333333,460</av:PointCollection>
                                           <av:PointCollection x:Key="FalseConnector">270,319.5 240,319.5 240,320 135,320</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <FlowDecision.True>
-                                        <FlowDecision x:Name="__ReferenceID4" Condition="[bool_HasPDFAttachment]" DisplayName="PDF Attachment?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                        <FlowDecision x:Name="__ReferenceID4" Condition="[bool_HasPDFAttachment]" DisplayName="PDF Attachment?" sap:VirtualizedContainerService.HintSize="60.666666666666664,60.666666666666664" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               <av:Point x:Key="ShapeLocation">270,460</av:Point>
-                                              <av:Size x:Key="ShapeSize">59,59</av:Size>
+                                              <av:Size x:Key="ShapeSize">60.666666666666664,60.666666666666664</av:Size>
                                               <av:PointCollection x:Key="FalseConnector">270,489.5 240,489.5 240,490 145,490</av:PointCollection>
-                                              <av:PointCollection x:Key="TrueConnector">299.5,519 299.5,549 300,549 300,605</av:PointCollection>
+                                              <av:PointCollection x:Key="TrueConnector">300.3333333333333,520.6666666666666 300.3333333333333,550.6666666666667 300,550.6666666666667 300,605</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <FlowDecision.True>
@@ -500,7 +500,7 @@
                                                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Add To Queue &amp; Move to AP Invoice Entry - CoE Folder" sap:VirtualizedContainerService.HintSize="596,1578" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                              <Sequence DisplayName="Add To Queue &amp; Move to AP Invoice Entry - CoE Folder" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_84">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -653,7 +653,7 @@
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="666,105" sap2010:WorkflowViewState.IdRef="Catch`1_19">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="666.6666666666666,384.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_19">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -664,14 +664,14 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                            <Sequence DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="416,312.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_87">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Error" Message="[&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject+&quot; | Exception Message: &quot;+exception.Message]">
+                              <ui:LogMessage DisplayName="&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Error" Message="[&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject+&quot; | Exception Message: &quot;+exception.Message]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -713,10 +713,10 @@
                             </Sequence>
                           </ActivityAction>
                         </Catch>
-                        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="666,499" sap2010:WorkflowViewState.IdRef="Catch`1_22">
+                        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="666.6666666666666,504.6666666666667" sap2010:WorkflowViewState.IdRef="Catch`1_22">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -724,14 +724,14 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="416,429" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                            <Sequence DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="416,432.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_88">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_81" Level="Error" Message="[&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject+&quot; | Exception Message: &quot;+exception.Message]">
+                              <ui:LogMessage DisplayName="&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_81" Level="Error" Message="[&quot;AP_FetchMailsAddtoQueue: Failed to process current Mail Subject | &quot;+currentOffice365Message.Subject+&quot; | Exception Message: &quot;+exception.Message]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -757,61 +757,76 @@
               </ui:ForEach.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <If Condition="[in_TenantName.ToUpper.Equals(&quot;DEV&quot;)]" DisplayName="Handle Set Period in Assest based on Tenant  name" sap:VirtualizedContainerService.HintSize="450,719" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[CBool(Config(&quot;AP_PreDispatcher_FromPeriod_Flag&quot;))]" DisplayName="Handle Set Period in Asset based on Flag" sap:VirtualizedContainerService.HintSize="450,611.3333333333334" sap2010:WorkflowViewState.IdRef="If_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="DEV" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                <Sequence DisplayName="Update Asset" sap:VirtualizedContainerService.HintSize="416,193.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_73">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:SetAsset TimeoutMS="{x:Null}" AssetName="[Config(&quot;AP_PreDispatcher_FromPeriodAssetName&quot;).ToString]" DisplayName="Set FromPeriod Asset" FolderPath="[Config(&quot;AP_PreDispatcherQueue_Folder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[str_ToPeriod]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:SetAsset>
+                  <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: No new emails in Input folder | &quot;+Config(&quot;AP_O365_MailFolder_Input&quot;).ToString" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Updated Set Period for Mail&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="PROD" sap:VirtualizedContainerService.HintSize="416,478" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                <Sequence DisplayName="Not Update Asset" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_74">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SetAsset TimeoutMS="{x:Null}" AssetName="[Config(&quot;AP_PreDispatcher_FromPeriodAssetName&quot;).ToString]" DisplayName="Set FromPeriod Asset" FolderPath="[Config(&quot;AP_PreDispatcherQueue_Folder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="354,226" sap2010:WorkflowViewState.IdRef="SetAsset_4" Value="[str_ToPeriod]">
+                  <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: Set Period Asset | &quot;+Config(&quot;AP_PreDispatcher_FromPeriod_Flag&quot;).ToString" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_82" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Set Period Asset | &quot;+Config(&quot;AP_PreDispatcher_FromPeriod_Flag&quot;).ToString]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:SetAsset>
-                  <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: No new emails in Input folder | &quot;+Config(&quot;AP_O365_MailFolder_Input&quot;).ToString" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Updated Set Period for Mail&quot;]" />
+                  </ui:LogMessage>
                 </Sequence>
               </If.Else>
             </If>
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="No Emails" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_67">
+          <Sequence DisplayName="No Emails" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_67">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: No new emails in Input folder | &quot;+Config(&quot;AP_O365_MailFolder_Input&quot;).ToString" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: No new emails in Input folder | &quot;+Config(&quot;AP_O365_MailFolder_Input&quot;).ToString]" />
+            <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: No new emails in Input folder | &quot;+Config(&quot;AP_O365_MailFolder_Input&quot;).ToString" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: No new emails in Input folder | &quot;+Config(&quot;AP_O365_MailFolder_Input&quot;).ToString]" />
           </Sequence>
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: Ended&quot;" sap:VirtualizedContainerService.HintSize="954,164" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - &quot;AP_FetchMailsAddtoQueue: Ended&quot;" sap:VirtualizedContainerService.HintSize="608,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;AP_FetchMailsAddtoQueue: Ended&quot;]" />
   </Sequence>
 </Activity>

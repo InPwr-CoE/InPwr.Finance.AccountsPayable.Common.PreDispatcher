@@ -370,10 +370,10 @@
           }
         }
       },
-      "InPwr.CoE.CustomComponent.Utility/1.0.15": {
+      "InPwr.CoE.CustomComponent.Utility/1.0.16": {
         "type": "package",
         "dependencies": {
-          "InPwr.CoE.CustomComponent.Utility.Library.Runtime": "1.0.15",
+          "InPwr.CoE.CustomComponent.Utility.Library.Runtime": "1.0.16",
           "UiPath.Excel.Activities": "2.24.3",
           "UiPath.Mail.Activities": "1.24.2",
           "UiPath.MicrosoftOffice365.Activities": "2.8.22",
@@ -387,7 +387,7 @@
           "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.ViewModels.dll": {}
         }
       },
-      "InPwr.CoE.CustomComponent.Utility.Library.Runtime/1.0.15": {
+      "InPwr.CoE.CustomComponent.Utility.Library.Runtime/1.0.16": {
         "type": "package",
         "dependencies": {
           "UiPath.Excel.Activities": "2.24.3",
@@ -402,15 +402,15 @@
         "runtime": {
           "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.Core.dll": {},
           "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_15153646.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_25647901.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_26603182.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_27592394.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_47327600.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_4900976.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_58212290.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_61210085.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_8775612.dll": {}
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_11995060.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_22051680.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_27450073.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_32939318.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_38219527.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_39311712.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_47094532.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_51473986.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_66121481.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -6566,10 +6566,10 @@
           }
         }
       },
-      "InPwr.CoE.CustomComponent.Utility/1.0.15": {
+      "InPwr.CoE.CustomComponent.Utility/1.0.16": {
         "type": "package",
         "dependencies": {
-          "InPwr.CoE.CustomComponent.Utility.Library.Runtime": "1.0.15",
+          "InPwr.CoE.CustomComponent.Utility.Library.Runtime": "1.0.16",
           "UiPath.Excel.Activities": "2.24.3",
           "UiPath.Mail.Activities": "1.24.2",
           "UiPath.MicrosoftOffice365.Activities": "2.8.22",
@@ -6583,7 +6583,7 @@
           "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.ViewModels.dll": {}
         }
       },
-      "InPwr.CoE.CustomComponent.Utility.Library.Runtime/1.0.15": {
+      "InPwr.CoE.CustomComponent.Utility.Library.Runtime/1.0.16": {
         "type": "package",
         "dependencies": {
           "UiPath.Excel.Activities": "2.24.3",
@@ -6598,15 +6598,15 @@
         "runtime": {
           "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.Core.dll": {},
           "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_15153646.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_25647901.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_26603182.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_27592394.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_47327600.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_4900976.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_58212290.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_61210085.dll": {},
-          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_8775612.dll": {}
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_11995060.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_22051680.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_27450073.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_32939318.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_38219527.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_39311712.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_47094532.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_51473986.dll": {},
+          "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_66121481.dll": {}
         },
         "contentFiles": {
           "contentFiles/any/any/_._": {
@@ -12841,10 +12841,10 @@
         "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Mail_Expressions_47120742.dll"
       ]
     },
-    "InPwr.CoE.CustomComponent.Utility/1.0.15": {
-      "sha512": "3hF4oAo7swJX0S1K71/2tsAX2+IaAMyTcjzrILM0Qqxe6BRmU3a14IDKnfaGBOKV9AEMYKpIyfJe0WGNWzLgOw==",
+    "InPwr.CoE.CustomComponent.Utility/1.0.16": {
+      "sha512": "YFXQCPN6ofliKTMfREFQ6Ecph0wa2HeRzgbGnRKErFJ1EJ+BWQ1TCJ5kXzs7y8ZNB6vim9HjAZ1wnAwYhlscOQ==",
       "type": "package",
-      "path": "inpwr.coe.customcomponent.utility/1.0.15",
+      "path": "inpwr.coe.customcomponent.utility/1.0.16",
       "files": [
         ".nupkg.metadata",
         "InPwr_logo.png",
@@ -12897,15 +12897,15 @@
         "content/bindings.json",
         "content/bindings_v2.json",
         "content/project.json",
-        "inpwr.coe.customcomponent.utility.1.0.15.nupkg.sha512",
+        "inpwr.coe.customcomponent.utility.1.0.16.nupkg.sha512",
         "inpwr.coe.customcomponent.utility.nuspec",
         "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.ViewModels.dll"
       ]
     },
-    "InPwr.CoE.CustomComponent.Utility.Library.Runtime/1.0.15": {
-      "sha512": "woPulNcVhDh6uwHttj0YPi/1aQaSinemUjCJdwFNBEansRvo4VFdfnuRD14AYPq1tNheSfJ3qxI9odhIcOMSwA==",
+    "InPwr.CoE.CustomComponent.Utility.Library.Runtime/1.0.16": {
+      "sha512": "PJlXX57EUQRfotMsX5jt6ypT1l2U1uDbA6y7aLcSdslb4C+dG0YT/KNNY7Z3PuydyHgQG9UWDWzr42c50wE5RA==",
       "type": "package",
-      "path": "inpwr.coe.customcomponent.utility.library.runtime/1.0.15",
+      "path": "inpwr.coe.customcomponent.utility.library.runtime/1.0.16",
       "files": [
         ".nupkg.metadata",
         "content/.codedworkflows/ConnectionsFactory.cs",
@@ -12953,19 +12953,19 @@
         "content/bindings_v2.json",
         "contentFiles/any/any/.objects/.metadata",
         "contentFiles/any/any/.objects/.type",
-        "inpwr.coe.customcomponent.utility.library.runtime.1.0.15.nupkg.sha512",
+        "inpwr.coe.customcomponent.utility.library.runtime.1.0.16.nupkg.sha512",
         "inpwr.coe.customcomponent.utility.library.runtime.nuspec",
         "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.Core.dll",
         "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_15153646.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_25647901.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_26603182.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_27592394.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_47327600.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_4900976.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_58212290.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_61210085.dll",
-        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_8775612.dll"
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_11995060.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_22051680.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_27450073.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_32939318.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_38219527.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_39311712.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_47094532.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_51473986.dll",
+        "lib/net8.0-windows7.0/InPwr.CoE.CustomComponent.Utility_Expressions_66121481.dll"
       ]
     },
     "Irony.NetCore/1.0.11": {
@@ -23635,7 +23635,7 @@
     "net8.0-windows7.0": [
       "InPwr.CoE.CustomComponent.DataServices >= 1.0.7 <= 1.0.7",
       "InPwr.CoE.CustomComponent.Mail >= 1.0.14 <= 1.0.14",
-      "InPwr.CoE.CustomComponent.Utility >= 1.0.15 <= 1.0.15",
+      "InPwr.CoE.CustomComponent.Utility >= 1.0.16 <= 1.0.16",
       "UiPath.Excel.Activities >= 3.0.1 <= 3.0.1",
       "UiPath.System.Activities >= 24.10.6 <= 24.10.6",
       "UiPath.UIAutomation.Activities >= 24.10.6 <= 24.10.6"
@@ -23668,7 +23668,7 @@
           "InPwr.CoE.CustomComponent.Utility": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.15, 1.0.15]"
+            "version": "[1.0.16, 1.0.16]"
           },
           "UiPath.Excel.Activities": {
             "include": "Runtime",
