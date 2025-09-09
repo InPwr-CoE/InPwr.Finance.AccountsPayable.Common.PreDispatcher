@@ -168,7 +168,7 @@
       <AssemblyReference>System.Net.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Set and log the transaction's status along with extra log fields. &#xA;There can be three possible statuses: Success, Business Exception and System Exception.&#xA;&#xA;Business Rule Exception characterizes an irregular situation according to the process's rules and prevents the transaction to be processed. The transaction is not retried in this case, since the result will be the same until the problem that causes the exception is solved.&#xA;For example, it can be considered a BusinessRuleException if a process expects to read an email's attachment, but the sender didn't attach any file. In this case, immediate retries of the transaction will not yield a different result.&#xA;&#xA;On the other hand, system exceptions are characterized by exceptions whose types are different than BusinessRuleException. When this kind of exception happens, the transaction item can be retried after closing and reopening the applications involved in the process. The rationale behind this is that the exception was caused by a problem in the applications, which might be solved by restarting them.&#xA;&#xA;If Orchestrator queues are the source of transactions, the Set Transaction Status activity is used to update the status. In addition, the retry mechanism is also implemented by Orchestrator.&#xA;&#xA;If Orchestrator queues are not used, the status can be set, for example, by writing to a specific column in a spreadsheet. In such cases, the retry mechanism is covered by the framework and the number of retries is defined in the configuration file.&#xA;&#xA;At the end, io_TransactionNumber is incremented, which makes the framework get the next transaction to be processed." DisplayName="Set Transaction Status" sap:VirtualizedContainerService.HintSize="1213,418" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart sap2010:Annotation.AnnotationText="Set and log the transaction's status along with extra log fields. &#xA;There can be three possible statuses: Success, Business Exception and System Exception.&#xA;&#xA;Business Rule Exception characterizes an irregular situation according to the process's rules and prevents the transaction to be processed. The transaction is not retried in this case, since the result will be the same until the problem that causes the exception is solved.&#xA;For example, it can be considered a BusinessRuleException if a process expects to read an email's attachment, but the sender didn't attach any file. In this case, immediate retries of the transaction will not yield a different result.&#xA;&#xA;On the other hand, system exceptions are characterized by exceptions whose types are different than BusinessRuleException. When this kind of exception happens, the transaction item can be retried after closing and reopening the applications involved in the process. The rationale behind this is that the exception was caused by a problem in the applications, which might be solved by restarting them.&#xA;&#xA;If Orchestrator queues are the source of transactions, the Set Transaction Status activity is used to update the status. In addition, the retry mechanism is also implemented by Orchestrator.&#xA;&#xA;If Orchestrator queues are not used, the status can be set, for example, by writing to a specific column in a spreadsheet. In such cases, the retry mechanism is covered by the framework and the number of retries is defined in the configuration file.&#xA;&#xA;At the end, io_TransactionNumber is incremented, which makes the framework get the next transaction to be processed." DisplayName="Set Transaction Status" sap:VirtualizedContainerService.HintSize="1468.8,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="str_MailSearchQuery" />
       <Variable x:TypeArguments="umm:Office365Message[]" Name="arr_emailsfetched" />
@@ -181,7 +181,7 @@
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-        <av:Size x:Key="ShapeSize">50,50</av:Size>
+        <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
         <x:Double x:Key="Width">687.9999999999999</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">295,52.5 295,82.5 292.3,82.5 292.3,126.4</av:PointCollection>
         <x:Double x:Key="Height">840.8</x:Double>
@@ -192,13 +192,13 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID5</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID5" Condition="[in_BusinessException is Nothing and in_SystemException is Nothing]" DisplayName="Is successful?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+    <FlowDecision x:Name="__ReferenceID5" Condition="[in_BusinessException is Nothing and in_SystemException is Nothing]" DisplayName="Is successful?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">262.8,126.4</av:Point>
-          <av:Size x:Key="ShapeSize">59,59</av:Size>
-          <av:PointCollection x:Key="FalseConnector">321.8,155.9 417.5,155.9 417.5,266.4</av:PointCollection>
+          <av:Size x:Key="ShapeSize">60,60</av:Size>
+          <av:PointCollection x:Key="FalseConnector">322.8,156.4 418,156.4 418,266.4</av:PointCollection>
           <av:PointCollection x:Key="TrueConnector">262.8,155.9 65,155.9 65,471.6</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -207,11 +207,11 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">10,471.6</av:Point>
-              <av:Size x:Key="ShapeSize">110,70</av:Size>
+              <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">65,541.6 65,571.6000000000001 165,571.6000000000001 165,715.6</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful." DisplayName="Success" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence sap2010:Annotation.AnnotationText="If the transaction item is processed without any exception, its status is updated as Successful." DisplayName="Success" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -328,7 +328,7 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">110,715.6</av:Point>
-                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="Increment transaction index and reset retries" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_12">
@@ -382,14 +382,14 @@
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID1" Condition="[in_BusinessException isnot Nothing]" DisplayName="Is Business Exception?" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+        <FlowDecision x:Name="__ReferenceID1" Condition="[in_BusinessException isnot Nothing]" DisplayName="Is Business Exception?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">388,266.4</av:Point>
-              <av:Size x:Key="ShapeSize">59,59</av:Size>
+              <av:Size x:Key="ShapeSize">60,60</av:Size>
               <av:PointCollection x:Key="TrueConnector">388,295.9 285,295.9 285,469.333333333333</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">447,295.9 505,295.9 505,467.666666666667</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">448.6666666666667,296.7333333333333 505,296.7333333333333 505,467.666666666667</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -397,11 +397,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">230,469.333333333333</av:Point>
-                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">285,539.333333333333 285,569.333333333333 165,569.333333333333 165,715.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a BussinessRuleException is thrown during the process, the transaction item's status is updated as Failed (Exception Type: Business).&#xA;" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap2010:Annotation.AnnotationText="If a BussinessRuleException is thrown during the process, the transaction item's status is updated as Failed (Exception Type: Business).&#xA;" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="611.2,2802.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -409,7 +409,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]" DisplayName="If TransactionItem is a QueueItem (Business Exception)" sap:VirtualizedContainerService.HintSize="550,57" sap2010:WorkflowViewState.IdRef="If_5">
+                <If Condition="[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(Uipath.Core.QueueItem))]" DisplayName="If TransactionItem is a QueueItem (Business Exception)" sap:VirtualizedContainerService.HintSize="548.8,56.8" sap2010:WorkflowViewState.IdRef="If_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -485,7 +485,31 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <TryCatch DisplayName="Try Catch - Customized Exception Handling" sap:VirtualizedContainerService.HintSize="550,2464" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+                <Assign DisplayName="Assign str_MailSearchQuery" sap:VirtualizedContainerService.HintSize="548.8,113.6" sap2010:WorkflowViewState.IdRef="Assign_17">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_MailSearchQuery]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">["internetMessageId eq '"+in_TransactionItem.SpecificContent("Message_Id").ToString+"'"]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[in_Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="548.8,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GetRobotCredential>
+                <iu:Exception_Notification AttachementCollection="{x:Null}" Attachment="{x:Null}" OverwriteSubject="{x:Null}" TimeoutMS="{x:Null}" ApplicationClientId="[str_o365ApplicationId]" ApplicationClientSecretId="[New System.Net.NetworkCredential(String.Empty, secstr_o365ApplicationSecret).Password]" BusinessException="[in_BusinessException]" BusinessProcessName="[in_Config(&quot;logF_BusinessProcessName&quot;).ToString]" DisplayName="Exception Notification (Exception_Notification)" ExceptionCode="EXB0001" ExceptionPropertiesDatatable="[in_ExceptionTable]" sap:VirtualizedContainerService.HintSize="548.8,56.8" sap2010:WorkflowViewState.IdRef="Exception_Notification_8" OverwriteBody="[in_ExceptionTable.Rows(1)(&quot;EmailBody&quot;).ToString().Replace(&quot;{0}&quot;,&quot;Mail Subject: &quot;+in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString)]" SystemException="[Nothing]" TenantId="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" in_MailAccount="[in_Config(&quot;AP_MailAddress&quot;).tostring]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </iu:Exception_Notification>
+                <TryCatch DisplayName="Try Catch - Customized Exception Handling" sap:VirtualizedContainerService.HintSize="548.8,1722.4" sap2010:WorkflowViewState.IdRef="TryCatch_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -493,37 +517,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Handling Business Exception" sap:VirtualizedContainerService.HintSize="512,2204" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                    <Sequence DisplayName="Handling Business Exception" sap:VirtualizedContainerService.HintSize="512,1459.2" sap2010:WorkflowViewState.IdRef="Sequence_35">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign str_MailSearchQuery" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_17">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[str_MailSearchQuery]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">["internetMessageId eq '"+in_TransactionItem.SpecificContent("Message_Id").ToString+"'"]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[in_Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:GetRobotCredential>
-                      <iu:Exception_Notification AttachementCollection="{x:Null}" Attachment="{x:Null}" OverwriteSubject="{x:Null}" TimeoutMS="{x:Null}" ApplicationClientId="[str_o365ApplicationId]" ApplicationClientSecretId="[New System.Net.NetworkCredential(String.Empty, secstr_o365ApplicationSecret).Password]" BusinessException="[in_BusinessException]" BusinessProcessName="[in_Config(&quot;logF_BusinessProcessName&quot;).ToString]" DisplayName="Exception Notification (Exception_Notification)" ExceptionCode="EXB0001" ExceptionPropertiesDatatable="[in_ExceptionTable]" sap:VirtualizedContainerService.HintSize="450,479" sap2010:WorkflowViewState.IdRef="Exception_Notification_8" OverwriteBody="[in_ExceptionTable.Rows(1)(&quot;EmailBody&quot;).ToString().Replace(&quot;{0}&quot;,&quot;Mail Subject: &quot;+in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString)]" SystemException="[Nothing]" TenantId="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" in_MailAccount="[in_Config(&quot;AP_MailAddress&quot;).tostring]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </iu:Exception_Notification>
-                      <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="1" Emailfolder="[in_Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString]" EmailsRead="[arr_emailsfetched]" sap:VirtualizedContainerService.HintSize="450,479" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_2" MarkAsRead="True" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).tostring]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
+                      <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="1" Emailfolder="[in_Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString]" EmailsRead="[arr_emailsfetched]" sap:VirtualizedContainerService.HintSize="449.6,486.4" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_2" MarkAsRead="False" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).tostring]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -531,7 +532,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </im:Get_Emails_From_Folder>
-                      <If Condition="[arr_emailsfetched.Count &gt; 0]" DisplayName="Handle Current Transaction - Email Availablity" sap:VirtualizedContainerService.HintSize="450,869" sap2010:WorkflowViewState.IdRef="If_9">
+                      <If Condition="[arr_emailsfetched.Count &gt; 0]" DisplayName="Handle Current Transaction - Email Availablity" sap:VirtualizedContainerService.HintSize="450,884" sap2010:WorkflowViewState.IdRef="If_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -539,14 +540,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Mail Exist" sap:VirtualizedContainerService.HintSize="416,456" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <Sequence DisplayName="Mail Exist" sap:VirtualizedContainerService.HintSize="416,466" sap2010:WorkflowViewState.IdRef="Sequence_36">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <im:Move_Mail_To_Folder DestinationFolder="[in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="354,368" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_2" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
+                            <im:Move_Mail_To_Folder DestinationFolder="[in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="354,378" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_2" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -557,20 +558,20 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="Mail not Found" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                          <Sequence DisplayName="Mail not Found" sap:VirtualizedContainerService.HintSize="416,255.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_37">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message - Mail No Found" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Warn" Message="[string.Format(&quot;No mails fetched from [{0}] folder with subject [{1}] with mesaage Id - [{2}]&quot;,in_Config(&quot;AP_O365_MailFolder_Input&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Id&quot;).tostring)]" />
+                            <ui:LogMessage DisplayName="Log Message - Mail No Found" sap:VirtualizedContainerService.HintSize="354,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Warn" Message="[string.Format(&quot;No mails fetched from [{0}] folder with subject [{1}] with mesaage Id - [{2}]&quot;,in_Config(&quot;AP_O365_MailFolder_Input&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Id&quot;).tostring)]" />
                           </Sequence>
                         </If.Else>
                       </If>
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="516,22" sap2010:WorkflowViewState.IdRef="Catch`1_18">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="515.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -581,12 +582,12 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <ui:LogMessage DisplayName="Log Message - &quot;Set System Exception: Unable to send Exception notification | Exception reason: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="336,141" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Error" Message="[&quot;Set System Exception: Unable to move mail or send Exception notification | Exception reason: &quot;+exception.Message]" />
+                        <ui:LogMessage DisplayName="Log Message - &quot;Set System Exception: Unable to send Exception notification | Exception reason: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="341.6,54.4" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Error" Message="[&quot;Set System Exception: Unable to move mail or send Exception notification | Exception reason: &quot;+exception.Message]" />
                       </ActivityAction>
                     </Catch>
                   </TryCatch.Catches>
                 </TryCatch>
-                <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log business exception with additional logging fields" sap:VirtualizedContainerService.HintSize="550,576" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence sap2010:Annotation.AnnotationText="Includes custom log fields to the log message.&#xA;They are removed after logging to prevent duplicated status messages about a single transaction." DisplayName="Log business exception with additional logging fields" sap:VirtualizedContainerService.HintSize="548.8,588.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -594,14 +595,14 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AddLogFields DisplayName="Add transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="AddLogFields_5">
+                  <ui:AddLogFields DisplayName="Add transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="388,124.66666666666667" sap2010:WorkflowViewState.IdRef="AddLogFields_5">
                     <ui:AddLogFields.Fields>
                       <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">BusinessException</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionNumber">[io_TransactionNumber.ToString]</InArgument>
                     </ui:AddLogFields.Fields>
                   </ui:AddLogFields>
-                  <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[in_Config(&quot;LogMessage_BusinessRuleException&quot;).ToString + in_BusinessException.Message]" />
-                  <ui:RemoveLogFields DisplayName="Remove transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="RemoveLogFields_5">
+                  <ui:LogMessage DisplayName="Log Message (Business Exception)" sap:VirtualizedContainerService.HintSize="388,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[in_Config(&quot;LogMessage_BusinessRuleException&quot;).ToString + in_BusinessException.Message]" />
+                  <ui:RemoveLogFields DisplayName="Remove transaction log fields (Business Exception)" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="RemoveLogFields_5">
                     <ui:RemoveLogFields.Fields>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                         <InArgument x:TypeArguments="x:String">logF_TransactionStatus</InArgument>
@@ -621,10 +622,10 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">450,467.666666666667</av:Point>
-                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="596,1729" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence sap2010:Annotation.AnnotationText="If a system exception occurs during the process, the transaction item's status is updated as Failed (Exception Type: Application)." DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -632,8 +633,8 @@
                     <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message (Consecutive exceptions)" sap:VirtualizedContainerService.HintSize="534,173" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Consecutive system exception counter is &quot; + io_ConsecutiveSystemExceptions.ToString + &quot;.&quot;]" />
-                <Assign DisplayName="Assign QueryRetry" sap:VirtualizedContainerService.HintSize="534,114" sap2010:WorkflowViewState.IdRef="Assign_10">
+                <ui:LogMessage DisplayName="Log Message (Consecutive exceptions)" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Consecutive system exception counter is &quot; + io_ConsecutiveSystemExceptions.ToString + &quot;.&quot;]" />
+                <Assign DisplayName="Assign QueryRetry" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_10">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[QueueRetry]</OutArgument>
                   </Assign.To>
@@ -641,7 +642,7 @@
                     <InArgument x:TypeArguments="x:Boolean">[in_TransactionItem isNot Nothing AndAlso (in_TransactionItem.GetType is GetType(UiPath.Core.QueueItem))]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <If Condition="[QueueRetry]" DisplayName="If TransactionItem is a QueueItem (System Exception)" sap:VirtualizedContainerService.HintSize="534,57" sap2010:WorkflowViewState.IdRef="If_6">
+                <If Condition="[QueueRetry]" DisplayName="If TransactionItem is a QueueItem (System Exception)" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="If_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -729,7 +730,7 @@
                     </Sequence>
                   </If.Else>
                 </If>
-                <ui:AddLogFields DisplayName="Add transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="534,57" sap2010:WorkflowViewState.IdRef="AddLogFields_6">
+                <ui:AddLogFields DisplayName="Add transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="AddLogFields_6">
                   <ui:AddLogFields.Fields>
                     <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionStatus">ApplicationException</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="logF_TransactionNumber">[io_TransactionNumber.ToString]</InArgument>
@@ -741,7 +742,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:AddLogFields>
-                <Assign DisplayName="Increment consecutive exceptions counter" sap:VirtualizedContainerService.HintSize="534,57" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign DisplayName="Increment consecutive exceptions counter" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="Assign_12">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[io_ConsecutiveSystemExceptions]</OutArgument>
                   </Assign.To>
@@ -755,7 +756,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="534,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Framework\RetryCurrentTransaction.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke RetryCurrentTransaction workflow" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\Framework\RetryCurrentTransaction.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                     <InOutArgument x:TypeArguments="x:Int32" x:Key="io_RetryNumber">[io_RetryNumber]</InOutArgument>
@@ -770,45 +771,45 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeWorkflowFile>
-                <TryCatch DisplayName="Try Catch - Customized Exception Handling" sap:VirtualizedContainerService.HintSize="534,799" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                <Assign DisplayName="Assign str_MailSearchQuery" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_16">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[str_MailSearchQuery]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">["internetMessageId eq '"+in_TransactionItem.SpecificContent("Message_Id").ToString+"'"]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[in_Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="433.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                </ui:GetRobotCredential>
+                <iu:Exception_Notification AttachementCollection="{x:Null}" Attachment="{x:Null}" OverwriteSubject="{x:Null}" TimeoutMS="{x:Null}" ApplicationClientId="[str_o365ApplicationId]" ApplicationClientSecretId="[New System.Net.NetworkCredential(String.Empty, secstr_o365ApplicationSecret).Password]" BusinessException="[Nothing ]" BusinessProcessName="[in_Config(&quot;logF_BusinessProcessName&quot;).ToString]" DisplayName="Exception Notification (Exception_Notification)" ExceptionCode="EXS0001" ExceptionPropertiesDatatable="[in_ExceptionTable]" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="Exception_Notification_6" OverwriteBody="[in_ExceptionTable.Rows(0)(&quot;EmailBody&quot;).ToString().Replace(&quot;{0}&quot;,&quot;Mail Subject: &quot;+in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString)]" SystemException="[in_SystemException]" TenantId="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" in_MailAccount="[in_Config(&quot;AP_MailAddress&quot;).tostring]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </iu:Exception_Notification>
+                <TryCatch DisplayName="Try Catch - Customized Exception Handling" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Handling System Exception" sap:VirtualizedContainerService.HintSize="496,539" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                    <Sequence DisplayName="Handling System Exception" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign str_MailSearchQuery" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_16">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[str_MailSearchQuery]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">["internetMessageId eq '"+in_TransactionItem.SpecificContent("Message_Id").ToString+"'"]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential &quot;AP_O365_Application" FolderPath="[in_Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:GetRobotCredential>
-                      <iu:Exception_Notification AttachementCollection="{x:Null}" Attachment="{x:Null}" OverwriteSubject="{x:Null}" TimeoutMS="{x:Null}" ApplicationClientId="[str_o365ApplicationId]" ApplicationClientSecretId="[New System.Net.NetworkCredential(String.Empty, secstr_o365ApplicationSecret).Password]" BusinessException="[Nothing ]" BusinessProcessName="[in_Config(&quot;logF_BusinessProcessName&quot;).ToString]" DisplayName="Exception Notification (Exception_Notification)" ExceptionCode="EXS0001" ExceptionPropertiesDatatable="[in_ExceptionTable]" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Exception_Notification_6" OverwriteBody="[in_ExceptionTable.Rows(0)(&quot;EmailBody&quot;).ToString().Replace(&quot;{0}&quot;,&quot;Mail Subject: &quot;+in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString)]" SystemException="[in_SystemException]" TenantId="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" in_MailAccount="[in_Config(&quot;AP_MailAddress&quot;).tostring]">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </iu:Exception_Notification>
-                      <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="1" Emailfolder="[in_Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString]" EmailsRead="[arr_emailsfetched]" sap:VirtualizedContainerService.HintSize="434,57" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" MarkAsRead="True" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).tostring]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
+                      <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="1" Emailfolder="[in_Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString]" EmailsRead="[arr_emailsfetched]" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" MarkAsRead="False" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).tostring]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -816,7 +817,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </im:Get_Emails_From_Folder>
-                      <If Condition="[arr_emailsfetched.Count &gt; 0]" DisplayName="Handle Current Transaction - Email Availablity" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="If_7">
+                      <If Condition="[arr_emailsfetched.Count &gt; 0]" DisplayName="Handle Current Transaction - Email Availablity" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="If_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -824,14 +825,14 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Mail Exist" sap:VirtualizedContainerService.HintSize="416,456" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                          <Sequence DisplayName="Mail Exist" sap:VirtualizedContainerService.HintSize="416,462.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <im:Move_Mail_To_Folder DestinationFolder="[in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="354,368" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_1" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
+                            <im:Move_Mail_To_Folder DestinationFolder="[in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="353.6,373.6" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_1" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -842,20 +843,20 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="Mail not Found" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                          <Sequence DisplayName="Mail not Found" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_34">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message - Mail No Found" sap:VirtualizedContainerService.HintSize="354,164" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Warn" Message="[string.Format(&quot;No mails fetched from [{0}] folder with subject [{1}] with mesaage Id - [{2}]&quot;,in_Config(&quot;AP_O365_MailFolder_Input&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Id&quot;).tostring)]" />
+                            <ui:LogMessage DisplayName="Log Message - Mail No Found" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Warn" Message="[string.Format(&quot;No mails fetched from [{0}] folder with subject [{1}] with mesaage Id - [{2}]&quot;,in_Config(&quot;AP_O365_MailFolder_Input&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Id&quot;).tostring)]" />
                           </Sequence>
                         </If.Else>
                       </If>
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,22" sap2010:WorkflowViewState.IdRef="Catch`1_17">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="419.2,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -866,12 +867,12 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                         </ActivityAction.Argument>
-                        <ui:LogMessage DisplayName="Log Message - &quot;Set System Exception: Unable to send Exception notification | Exception reason: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="336,141" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Error" Message="[&quot;Set System Exception: Unable to move mail or send Exception notification | Exception reason: &quot;+exception.Message]" />
+                        <ui:LogMessage DisplayName="Log Message - &quot;Set System Exception: Unable to send Exception notification | Exception reason: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="341.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Error" Message="[&quot;Set System Exception: Unable to move mail or send Exception notification | Exception reason: &quot;+exception.Message]" />
                       </ActivityAction>
                     </Catch>
                   </TryCatch.Catches>
                 </TryCatch>
-                <ui:RemoveLogFields DisplayName="Remove transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="534,57" sap2010:WorkflowViewState.IdRef="RemoveLogFields_6">
+                <ui:RemoveLogFields DisplayName="Remove transaction log fields (System Exception)" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="RemoveLogFields_6">
                   <ui:RemoveLogFields.Fields>
                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                       <InArgument x:TypeArguments="x:String">logF_TransactionStatus</InArgument>
@@ -885,7 +886,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:RemoveLogFields>
-                <TryCatch sap2010:Annotation.AnnotationText="Close all applications before returning to the Initialization state and opening them again.&#xA;If applications cannot be closed, kill their respective processes." DisplayName="Try closing applications" sap:VirtualizedContainerService.HintSize="534,150" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                <TryCatch sap2010:Annotation.AnnotationText="Close all applications before returning to the Initialization state and opening them again.&#xA;If applications cannot be closed, kill their respective processes." DisplayName="Try closing applications" sap:VirtualizedContainerService.HintSize="433.6,156" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
