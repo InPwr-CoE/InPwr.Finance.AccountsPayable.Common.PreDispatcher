@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>836,4396</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1064,4532</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="100">
@@ -193,7 +193,7 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_JobData: Get current job information (Process and Tenant name).&#xA;2) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;3) in_TransactionItem: Current transaction as mail message.&#xA;&#xA;Description: Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. &#xA;&#xA;Output: N/A" DisplayName="Process" sap:VirtualizedContainerService.HintSize="794.6666666666666,4331.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_JobData: Get current job information (Process and Tenant name).&#xA;2) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;3) in_TransactionItem: Current transaction as mail message.&#xA;&#xA;Description: Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. &#xA;&#xA;Output: N/A" DisplayName="Process" sap:VirtualizedContainerService.HintSize="795.2,4467.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="dic_VendorInformation" />
       <Variable x:TypeArguments="x:String" Name="str_ErrorMessage" />
@@ -210,8 +210,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - &quot;Process: Started&quot;" sap:VirtualizedContainerService.HintSize="732.6666666666666,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process: Started&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign - Process: Initialize" sap:VirtualizedContainerService.HintSize="732.6666666666666,210.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:LogMessage DisplayName="Log Message - &quot;Process: Started&quot;" sap:VirtualizedContainerService.HintSize="732.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Process: Started&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign - Process: Initialize" sap:VirtualizedContainerService.HintSize="732.8,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -241,8 +241,8 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message - &quot;Email Subject :  &quot;+in_TransactionItem.SpecificContent(&quot;Subject&quot;).ToString" sap:VirtualizedContainerService.HintSize="732.6666666666666,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Email Subject :  &quot;+in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_GetVendorInformation - Invoke Workflow File (Workflows\Mail\AP_GetVendorInformation.xaml)" sap:VirtualizedContainerService.HintSize="732.6666666666666,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Mail\AP_GetVendorInformation.xaml">
+    <ui:LogMessage DisplayName="Log Message - &quot;Email Subject :  &quot;+in_TransactionItem.SpecificContent(&quot;Subject&quot;).ToString" sap:VirtualizedContainerService.HintSize="732.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Email Subject :  &quot;+in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_GetVendorInformation - Invoke Workflow File (Workflows\Mail\AP_GetVendorInformation.xaml)" sap:VirtualizedContainerService.HintSize="732.8,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\Mail\AP_GetVendorInformation.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dicVendorInformation">[dic_VendorInformation]</OutArgument>
@@ -251,14 +251,14 @@
         <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Sequence DisplayName="Get Mail &amp; Move to Folder" sap:VirtualizedContainerService.HintSize="732.6666666666666,3156" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Get Mail &amp; Move to Folder" sap:VirtualizedContainerService.HintSize="732.8,3304" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Assign str_MailSearchQuery" sap:VirtualizedContainerService.HintSize="670.6666666666666,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign DisplayName="Assign str_MailSearchQuery" sap:VirtualizedContainerService.HintSize="670.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[str_MailSearchQuery]</OutArgument>
         </Assign.To>
@@ -266,8 +266,8 @@
           <InArgument x:TypeArguments="x:String">["internetMessageId eq '"+in_TransactionItem.SpecificContent("Message_Id").ToString+"'"]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential 0365Application" FolderPath="[in_Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="670.6666666666666,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]" />
-      <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="1" Emailfolder="[in_Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString]" EmailsRead="[arr_emailsfetched]" sap:VirtualizedContainerService.HintSize="670.6666666666666,492.6666666666667" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" MarkAsRead="False" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).tostring]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_config(&quot;AP_O365_Application&quot;).tostring]" CacheStrategy="None" DisplayName="Get Credential 0365Application" FolderPath="[in_Config(&quot;AP_O365_Application_AssetFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="670.4,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secstr_o365ApplicationSecret]" Username="[str_o365ApplicationId]" />
+      <im:Get_Emails_From_Folder DisplayName="Get Emails From Folder (Get_Emails_From_Folder)" EmailCount="1" Emailfolder="[in_Config(&quot;AP_O365_MailFolder_Automation&quot;).ToString]" EmailsRead="[arr_emailsfetched]" sap:VirtualizedContainerService.HintSize="670.4,486.4" sap2010:WorkflowViewState.IdRef="Get_Emails_From_Folder_1" MarkAsRead="False" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).tostring]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]" OnlyUnreadMessages="False" SearchQuery="[str_MailSearchQuery]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -275,7 +275,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </im:Get_Emails_From_Folder>
-      <If Condition="[arr_emailsfetched.Count &gt; 0]" DisplayName="Handle Current Transaction - Email Availablity" sap:VirtualizedContainerService.HintSize="670.6666666666666,2249.3333333333335" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[arr_emailsfetched.Count &gt; 0]" DisplayName="Handle Current Transaction - Email Availablity" sap:VirtualizedContainerService.HintSize="670.4,2408" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -283,14 +283,14 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Mail Exist" sap:VirtualizedContainerService.HintSize="636.6666666666666,1884" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Mail Exist" sap:VirtualizedContainerService.HintSize="636.8,2044" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="Set DestinationMailFolder" sap:VirtualizedContainerService.HintSize="574.6666666666666,117.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="Set DestinationMailFolder" sap:VirtualizedContainerService.HintSize="574.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[str_DestinationMailFolder]</OutArgument>
               </Assign.To>
@@ -298,7 +298,7 @@
                 <InArgument x:TypeArguments="x:String">[If(String.IsNullOrEmpty(str_DestinationMailFolder),in_Config("AP_O365_MailFolder_Queued").ToString.Replace("&lt;VendorType&gt;",dic_VendorInformation(in_Config("AP_DataService_FieldName_VendorType").ToString)),str_DestinationMailFolder)]</InArgument>
               </Assign.Value>
             </Assign>
-            <im:Move_Mail_To_Folder DestinationFolder="[str_DestinationMailFolder]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="574.6666666666666,387.3333333333333" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_1" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
+            <im:Move_Mail_To_Folder DestinationFolder="[str_DestinationMailFolder]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="574.4,382.4" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_1" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -306,9 +306,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </im:Move_Mail_To_Folder>
-            <If Condition="[str_DestinationMailFolder.ToLower.Contains(&quot;queued&quot;)]" DisplayName="Handle Vendor Exclusion Condition" sap:VirtualizedContainerService.HintSize="574.6666666666666,1291.3333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[str_DestinationMailFolder.ToLower.Contains(&quot;queued&quot;)]" DisplayName="Handle Vendor Exclusion Condition" sap:VirtualizedContainerService.HintSize="574.4,1459.2" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence DisplayName="Valid Mail" sap:VirtualizedContainerService.HintSize="540.6666666666666,696" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Valid Mail" sap:VirtualizedContainerService.HintSize="540.8,867.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="str_RuntimeLogFilePath" />
                   </Sequence.Variables>
@@ -318,7 +318,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MultipleAssign DisplayName="Multiple Assign - PostProcessing Rule" sap:VirtualizedContainerService.HintSize="478.6666666666667,210.66666666666666" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign DisplayName="Multiple Assign - PostProcessing Rule" sap:VirtualizedContainerService.HintSize="478.4,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                     <ui:MultipleAssign.AssignOperations>
                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -354,7 +354,8 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:MultipleAssign>
-                  <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item to Dispatcher Queue" FolderPath="[in_Config(&quot;AP_DispatcherQueue_Folder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.6666666666667,230" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" ItemInformationCollection="[in_TransactionItem.SpecificContent _&#xA;    .Where(Function(loopingKey) loopingKey.Key &lt;&gt; &quot;Current_Mail_Folder&quot;) _&#xA;    .ToDictionary(Function(loopingKey) loopingKey.Key, Function(loopingKey) loopingKey.Value)]" Priority="Normal" QueueType="[in_Config(&quot;AP_DispatcherQueue_Name&quot;).ToString.Replace(&quot;&lt;VendorType&gt;&quot;,dic_VendorInformation(&quot;ERPVendorType&quot;))]" Reference="[in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString]">
+                  <ui:LogMessage DisplayName="Log Message - &quot;Add Queue Item for Dispatcher: Transaction Reference | &quot;+in_TransactionItem.Reference" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Add Queue Item for Dispatcher: Transaction Reference | &quot;+in_TransactionItem.Reference]" />
+                  <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item to Dispatcher Queue" FolderPath="[in_Config(&quot;AP_DispatcherQueue_Folder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,226.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" ItemInformationCollection="[in_TransactionItem.SpecificContent _&#xA;    .Where(Function(loopingKey) loopingKey.Key &lt;&gt; &quot;Current_Mail_Folder&quot;) _&#xA;    .ToDictionary(Function(loopingKey) loopingKey.Key, Function(loopingKey) loopingKey.Value)]" Priority="Normal" QueueType="[in_Config(&quot;AP_DispatcherQueue_Name&quot;).ToString.Replace(&quot;&lt;VendorType&gt;&quot;,dic_VendorInformation(&quot;ERPVendorType&quot;))]" Reference="[in_TransactionItem.Reference]">
                     <ui:AddQueueItem.ItemInformation>
                       <InArgument x:TypeArguments="x:String" x:Key="Current_Mail_Folder">[str_DestinationMailFolder]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="Vendor_Type">[dic_VendorInformation("ERPVendorType")]</InArgument>
@@ -370,18 +371,18 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AddQueueItem>
-                  <ui:LogMessage DisplayName="Log Message AP_Dispatcher : Added to Dispatcher Q" sap:VirtualizedContainerService.HintSize="478.6666666666667,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Process : Added Transaction item to Dispatcher Queue | &quot;+ in_Config(&quot;AP_DispatcherQueue_Name&quot;).ToString.Replace(&quot;&lt;VendorType&gt;&quot;,dic_VendorInformation(&quot;ERPVendorType&quot;))]" />
+                  <ui:LogMessage DisplayName="Log Message AP_Dispatcher : Added to Dispatcher Q" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Process : Added Transaction item to Dispatcher Queue | &quot;+ in_Config(&quot;AP_DispatcherQueue_Name&quot;).ToString.Replace(&quot;&lt;VendorType&gt;&quot;,dic_VendorInformation(&quot;ERPVendorType&quot;))]" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Excluded Mail" sap:VirtualizedContainerService.HintSize="416,432.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Excluded Mail" sap:VirtualizedContainerService.HintSize="416,430.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - &quot;Invalid mail and updating staging log file for exception | &quot;+str_ErrorMessage" sap:VirtualizedContainerService.HintSize="354,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Invalid mail and updating staging log file for exception | &quot;+str_ErrorMessage]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_UpdateStagingLog - Invoke Workflow File (Workflows\Utility\AP_UpdateStagingLog.xaml)" sap:VirtualizedContainerService.HintSize="354,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\Utility\AP_UpdateStagingLog.xaml">
+                  <ui:LogMessage DisplayName="Log Message - &quot;Invalid mail and updating staging log file for exception | &quot;+str_ErrorMessage" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Invalid mail and updating staging log file for exception | &quot;+str_ErrorMessage]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_UpdateStagingLog - Invoke Workflow File (Workflows\Utility\AP_UpdateStagingLog.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\Utility\AP_UpdateStagingLog.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="in_dicVendorInformation">[dic_VendorInformation]</InArgument>
@@ -396,17 +397,17 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,202.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,202.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Throw DisplayName="Throw No Mail Found" Exception="[New SystemException(string.Format(&quot;No mails fetched from [{0}] folder with subject [{1}] with mesaage Id - [{2}]&quot;,in_Config(&quot;AP_O365_MailFolder_Input&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Id&quot;).tostring))]" sap:VirtualizedContainerService.HintSize="354,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            <Throw DisplayName="Throw No Mail Found" Exception="[New SystemException(string.Format(&quot;No mails fetched from [{0}] folder with subject [{1}] with mesaage Id - [{2}]&quot;,in_Config(&quot;AP_O365_MailFolder_Input&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString,in_TransactionItem.SpecificContent(&quot;Message_Id&quot;).tostring))]" sap:VirtualizedContainerService.HintSize="353.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_1" />
           </Sequence>
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - &quot;Process: Ended&quot;" sap:VirtualizedContainerService.HintSize="732.6666666666666,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Process: Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - &quot;Process: Ended&quot;" sap:VirtualizedContainerService.HintSize="732.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Process: Ended&quot;]" />
   </Sequence>
 </Activity>

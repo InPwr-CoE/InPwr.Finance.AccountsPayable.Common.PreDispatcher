@@ -59,9 +59,6 @@
       "Path": "Workflows/Mail/AP_FetchMailsAddtoQueue.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "easternTime&Sequence_92",
-        "easternZone&Sequence_92",
-        "str_InputString&Sequence_92",
         "int_CountOfMovedItems&Sequence_63",
         "arr_invoicekeywords&Sequence_63",
         "str_MailSearchQuery&Sequence_63",
@@ -228,6 +225,14 @@
         "in_TransactionItem",
         "in_JobData"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
