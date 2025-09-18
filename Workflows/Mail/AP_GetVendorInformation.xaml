@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1239,2585</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1064,2387.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AP_TEMP_GetMail</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -182,7 +182,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Input: &#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_TransactionItem: Mail message metadata from Queue with the key value pair such as mail Subject, From address, Sender Domain, Date, Time, Message Id.&#xA;&#xA;Description: This workflow is used to get Vendor information based on sender domain and Subject validation.&#xA;&#xA;Output:&#xA;1) out_dicVendorInformation: Returns the vendor information as a dictionary based on Sender domain or Subject validation.&#xA;2) out_strErrorMessage: Retruns the encountered Error message while validating Subject and Domain validation.&#xA;3) out_DestinationMailFolder: Returns the mail folder name where mails has to be moved." DisplayName="AP_GetVendorInformation" sap:VirtualizedContainerService.HintSize="670,2520" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Input: &#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_TransactionItem: Mail message metadata from Queue with the key value pair such as mail Subject, From address, Sender Domain, Date, Time, Message Id.&#xA;&#xA;Description: This workflow is used to get Vendor information based on sender domain and Subject validation.&#xA;&#xA;Output:&#xA;1) out_dicVendorInformation: Returns the vendor information as a dictionary based on Sender domain or Subject validation.&#xA;2) out_strErrorMessage: Retruns the encountered Error message while validating Subject and Domain validation.&#xA;3) out_DestinationMailFolder: Returns the mail folder name where mails has to be moved." DisplayName="AP_GetVendorInformation" sap:VirtualizedContainerService.HintSize="603.2,2322.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_SenderDomain" />
     </Sequence.Variables>
@@ -193,14 +193,14 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - &quot;GetVendorInformation: Started&quot;" sap:VirtualizedContainerService.HintSize="608,173" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;GetVendorInformation: Started&quot;]">
+    <ui:LogMessage DisplayName="Log Message - &quot;GetVendorInformation: Started&quot;" sap:VirtualizedContainerService.HintSize="540.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;GetVendorInformation: Started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <Sequence sap2010:Annotation.AnnotationText="Initialize Vendor Information dictionary." DisplayName="Input Validation Stage" sap:VirtualizedContainerService.HintSize="608,321" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence sap2010:Annotation.AnnotationText="Initialize Vendor Information dictionary." DisplayName="Input Validation Stage" sap:VirtualizedContainerService.HintSize="540.8,323.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -208,7 +208,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign - Initialize Dic" sap:VirtualizedContainerService.HintSize="479,170" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign DisplayName="Multiple Assign - Initialize Dic" sap:VirtualizedContainerService.HintSize="478.4,171.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -236,7 +236,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="IF (Dictionary[&quot;Sender Email Domain&quot;] != &quot;inpwrinc.com&quot;){&#xA;   IF(Lookup(Dictionary[&quot;Vendor_Email_Domain&quot;] in Entity) == FOUND){&#xA;    -&gt; Get the matching row in the Entity and assign them to output dictionary&#xA;   }&#xA;   ELSE{&#xA;    Assign the Error Message = &quot;Unable to determine source vendor from email domain.&quot;&#xA;    Reset the dictionary value with default value and Is_Vendor_Excluded has to be &quot;Yes&quot;&#xA;   } }&#xA;&#xA;  ELSE IF (Dictionary[&quot;Sender Email Domain&quot;] == &quot;inpwrinc.com&quot;){&#xA;    //Subject line nomenclature will be: &lt;Vendor name&gt; + “__ invoice” &#xA;     IF(MailMetadata Dictionary[&quot;Subject&quot;] is not null or empty{&#xA;          IF(Vendor Name exist in Dictionary[&quot;email subject line&quot;]){&#xA;            IF(Lookup(ERP_Vendor_Name in Entity using Vendor Name) == FOUND){&#xA;            -&gt; Get the matching row in the Entity and assign them to output dictionary&#xA;            }&#xA;          ELSE{&#xA;          Assign the Error Message = &quot;Unable to determine source vendor from email subject line.&quot;) &#xA;          Reset the dictionary value with default value and Is_Vendor_Excluded has to be &quot;Yes&quot;&#xA;          }&#xA;     ELSE{&#xA;     Throw an exception for Subject line is empty.&#xA;      }&#xA;   }}" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="608,1698" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence sap2010:Annotation.AnnotationText="IF (Dictionary[&quot;Sender Email Domain&quot;] != &quot;inpwrinc.com&quot;){&#xA;   IF(Lookup(Dictionary[&quot;Vendor_Email_Domain&quot;] in Entity) == FOUND){&#xA;    -&gt; Get the matching row in the Entity and assign them to output dictionary&#xA;   }&#xA;   ELSE{&#xA;    Assign the Error Message = &quot;Unable to determine source vendor from email domain.&quot;&#xA;    Reset the dictionary value with default value and Is_Vendor_Excluded has to be &quot;Yes&quot;&#xA;   } }&#xA;&#xA;  ELSE IF (Dictionary[&quot;Sender Email Domain&quot;] == &quot;inpwrinc.com&quot;){&#xA;    //Subject line nomenclature will be: &lt;Vendor name&gt; + “__ invoice” &#xA;     IF(MailMetadata Dictionary[&quot;Subject&quot;] is not null or empty{&#xA;          IF(Vendor Name exist in Dictionary[&quot;email subject line&quot;]){&#xA;            IF(Lookup(ERP_Vendor_Name in Entity using Vendor Name) == FOUND){&#xA;            -&gt; Get the matching row in the Entity and assign them to output dictionary&#xA;            }&#xA;          ELSE{&#xA;          Assign the Error Message = &quot;Unable to determine source vendor from email subject line.&quot;) &#xA;          Reset the dictionary value with default value and Is_Vendor_Excluded has to be &quot;Yes&quot;&#xA;          }&#xA;     ELSE{&#xA;     Throw an exception for Subject line is empty.&#xA;      }&#xA;   }}" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="540.8,1452" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -244,16 +244,16 @@
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:IfElseIfV2 Condition="[str_SenderDomain.ToLower &lt;&gt; in_Config(&quot;AP_MailValidation_InPwrDomainName&quot;).ToString]" DisplayName="If Sender Domain &lt;&gt; inpwr domain" sap:VirtualizedContainerService.HintSize="546,1206" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+      <ui:IfElseIfV2 Condition="[str_SenderDomain.ToLower &lt;&gt; in_Config(&quot;AP_MailValidation_InPwrDomainName&quot;).ToString]" DisplayName="If Sender Domain &lt;&gt; inpwr domain" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
         <ui:IfElseIfV2.Else>
-          <Sequence DisplayName="Else - Subject Validation" sap:VirtualizedContainerService.HintSize="512,624" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <Sequence DisplayName="Else - Subject Validation" sap:VirtualizedContainerService.HintSize="512,755.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap2010:Annotation.AnnotationText="I) If Subject is null or empty then throw an exception with error message. Else Continue on Vendor name validation.&#xA;2) If Sender Domain is equal to inpwr domain name, then try to get Vendor name from the mail subject.&#xA;2.1) If Vendor Name found in the Subject, then lookup the Vendor name in the Entity. Fetch the corresponding details and build as a dictionary.&#xA;2.2) If Vendor Name not found in the Subject, then consider them as Excluded.&#xA;" DisplayName="Subject validation" sap:VirtualizedContainerService.HintSize="450,536" sap2010:WorkflowViewState.IdRef="Sequence_51">
+            <Sequence sap2010:Annotation.AnnotationText="I) If Subject is null or empty then throw an exception with error message. Else Continue on Vendor name validation.&#xA;2) If Sender Domain is equal to inpwr domain name, then try to get Vendor name from the mail subject.&#xA;2.1) If Vendor Name found in the Subject, then lookup the Vendor name in the Entity. Fetch the corresponding details and build as a dictionary.&#xA;2.2) If Vendor Name not found in the Subject, then consider them as Excluded.&#xA;" DisplayName="Subject validation" sap:VirtualizedContainerService.HintSize="449.6,666.4" sap2010:WorkflowViewState.IdRef="Sequence_51">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -261,7 +261,7 @@
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - Domain Name Matching" sap:VirtualizedContainerService.HintSize="388,173" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Sender domain matching [ &quot;+in_Config(&quot;AP_MailValidation_InPwrDomainName&quot;).ToString +&quot; ]. | Sender Domain: &quot;+str_SenderDomain]">
+              <ui:LogMessage DisplayName="Log Message - Domain Name Matching" sap:VirtualizedContainerService.HintSize="387.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Sender domain matching [ &quot;+in_Config(&quot;AP_MailValidation_InPwrDomainName&quot;).ToString +&quot; ]. | Sender Domain: &quot;+str_SenderDomain]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -269,7 +269,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                 <ui:CommentOut.Body>
                   <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_52">
                     <If Condition="[String.IsNullOrEmpty(in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString) orelse string.IsNullOrWhiteSpace(in_TransactionItem.SpecificContent(&quot;Message_Subject&quot;).ToString)]" DisplayName="Handle Subject is Empty" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="If_10">
@@ -386,7 +386,7 @@
                   </Sequence>
                 </ui:CommentOut.Body>
               </ui:CommentOut>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_SubjectValidation - Invoke Workflow File (Workflows\Core Validation\AP_SubjectValidation.xaml)" sap:VirtualizedContainerService.HintSize="388,48" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Workflows\Core Validation\AP_SubjectValidation.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_SubjectValidation - Invoke Workflow File (Workflows\Core Validation\AP_SubjectValidation.xaml)" sap:VirtualizedContainerService.HintSize="387.2,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Workflows\Core Validation\AP_SubjectValidation.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dicVendorInformation">[out_dicVendorInformation]</OutArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="out_DestinationMailFolder">[out_DestinationMailFolder]</OutArgument>
@@ -396,8 +396,8 @@
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
@@ -409,12 +409,12 @@
         </ui:IfElseIfV2.ElseIfs>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:IfElseIfV2.Then>
-          <Sequence sap2010:Annotation.AnnotationText="1) If Sender Domain is not equal to inpwr domain name, then Lookup the Vendor Domain name by sender domain in the Entity.&#xA;1.1) If Data found in the Entity, then fetch the corresponding details and build as a dictionary.&#xA;1.2) If Data not found in the Entity, then consider them as Excluded, mail_destination foler in this case is that robot moves it back to Inbox&#xA;" DisplayName="Domain Name validation" sap:VirtualizedContainerService.HintSize="416,373" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence sap2010:Annotation.AnnotationText="1) If Sender Domain is not equal to inpwr domain name, then Lookup the Vendor Domain name by sender domain in the Entity.&#xA;1.1) If Data found in the Entity, then fetch the corresponding details and build as a dictionary.&#xA;1.2) If Data not found in the Entity, then consider them as Excluded, mail_destination foler in this case is that robot moves it back to Inbox&#xA;" DisplayName="Domain Name validation" sap:VirtualizedContainerService.HintSize="416,380" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -422,7 +422,7 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_SenderDomainValidation - Invoke Workflow File (Workflows\Core Validation\AccountPayable_SenderDomainValidation.xaml)" sap:VirtualizedContainerService.HintSize="354,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Core Validation\AP_SenderDomainValidation.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_SenderDomainValidation - Invoke Workflow File (Workflows\Core Validation\AccountPayable_SenderDomainValidation.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Core Validation\AP_SenderDomainValidation.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dicVendorInformation">[out_dicVendorInformation]</OutArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_DestinationMailFolder">[out_DestinationMailFolder]</OutArgument>
@@ -439,8 +439,63 @@
           </Sequence>
         </ui:IfElseIfV2.Then>
       </ui:IfElseIfV2>
+      <If Condition="[out_strErrorMessage.ToUpper.Contains(&quot;UNKNOWN VENDOR&quot;)]" DisplayName="Handle Sender Address Condition and throw exception" sap:VirtualizedContainerService.HintSize="449.6,846.4" sap2010:WorkflowViewState.IdRef="If_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence DisplayName="Validate Sender Address" sap:VirtualizedContainerService.HintSize="416,430.4" sap2010:WorkflowViewState.IdRef="Sequence_53">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - &quot;Moving to Sender Address Validation | Error Message already exist: &quot;+out_strErrorMessage " sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Moving to Sender Address Validation | Error Message already exist: &quot;+out_strErrorMessage]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="AP_SenderAddressValidation - Invoke Workflow File (Workflows\Core Validation\AP_SenderAddressValidation.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Workflows\Core Validation\AP_SenderAddressValidation.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="out_dicVendorInformation">[out_dicVendorInformation]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_DestinationMailFolder">[out_DestinationMailFolder]</OutArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_strErrorMessage">[out_strErrorMessage]</OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strSenderAddress">[in_TransactionItem.SpecificContent("Message_SenderAddress").ToString]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Set Error Message" sap:VirtualizedContainerService.HintSize="416,254.4" sap2010:WorkflowViewState.IdRef="Sequence_54">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message - &quot;Error Message already exist: &quot;+out_strErrorMessage+&quot; | Skip Sender Address validation&quot;" sap:VirtualizedContainerService.HintSize="353.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Error Message already exist: &quot;+out_strErrorMessage+&quot; | Skip Sender Address validation&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+          </Sequence>
+        </If.Else>
+      </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - &quot;AP_GetVendorInformation: Ended&quot;" sap:VirtualizedContainerService.HintSize="608,48" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_GetVendorInformation: Ended&quot;]">
+    <ui:LogMessage DisplayName="Log Message - &quot;AP_GetVendorInformation: Ended&quot;" sap:VirtualizedContainerService.HintSize="540.8,48" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AP_GetVendorInformation: Ended&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">False</x:Boolean>

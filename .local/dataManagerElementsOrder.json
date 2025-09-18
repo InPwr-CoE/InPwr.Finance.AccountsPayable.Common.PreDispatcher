@@ -235,6 +235,24 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Core Validation/AP_SenderAddressValidation.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_EntityResponse&Sequence_1",
+        "str_EntityName&Sequence_1",
+        "arr_VendorEntities&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dicVendorInformation",
+        "out_DestinationMailFolder",
+        "in_Config",
+        "out_strErrorMessage",
+        "in_strSenderAddress"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
