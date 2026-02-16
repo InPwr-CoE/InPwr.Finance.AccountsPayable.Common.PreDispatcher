@@ -253,6 +253,19 @@
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Utility/AP_ReportAssetUpdate.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_statusReport&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_RuntimeLogFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
