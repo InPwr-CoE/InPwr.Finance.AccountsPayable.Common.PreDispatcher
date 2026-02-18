@@ -15,13 +15,13 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.1.0",
-  "projectVersion": "1.0.13",
+  "projectVersion": "1.0.14",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
-    "requiresUserInteraction": true,
+    "requiresUserInteraction": false,
     "supportsPersistence": false,
     "workflowSerialization": "DataContract",
     "excludedLoggedData": [
